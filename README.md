@@ -30,12 +30,6 @@ Neste portfólio apresento:
 
 ---
 
-## 📸 Preview
-
-![Página Inicial](screenshots/home.png)
-
----
-
 ## ✨ Recursos
 
 ✔ Design moderno e responsivo
