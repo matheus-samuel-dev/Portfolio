@@ -34,7 +34,7 @@ Neste portfólio apresento:
 
 ✔ Design moderno e responsivo
 
-✔ Tema escuro
+✔ Tema escuro e claro
 
 ✔ Navegação suave
 
