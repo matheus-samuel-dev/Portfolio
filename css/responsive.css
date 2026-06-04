@@ -1,0 +1,42 @@
+@media (max-width: 992px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+
+        padding-top: 150px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-text h2 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+}
