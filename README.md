@@ -186,4 +186,3 @@ Sempre buscando novos desafios para aplicar conhecimentos, aprender novas tecnol
 - GitHub: https://github.com/matheus-samuel-dev
 
 
-Sempre buscando novos desafios para aplicar conhecimentos, aprender novas tecnologias e construir soluções que gerem valor.
