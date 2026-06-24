@@ -185,4 +185,9 @@ Sempre buscando novos desafios para aplicar conhecimentos, aprender novas tecnol
 - LinkedIn: https://www.linkedin.com/in/matheus-samuel-dev
 - GitHub: https://github.com/matheus-samuel-dev
 
+---
+
+⭐ Se gostou do projeto, considere deixar uma estrela no repositório.
+
+
 
