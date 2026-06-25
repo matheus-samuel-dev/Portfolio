@@ -76,32 +76,6 @@ Além de servir como cartão de visitas digital, o projeto demonstra meus conhec
 
 ---
 
-## 📸 Capturas de Tela
-
-<table>
-<tr>
-
-<td width="50%">
-
-### 🖥️ Desktop
-
-<img src="assets/projects/convite-rsvp/02-home-desktop.png">
-
-</td>
-
-<td width="50%">
-
-### 📱 Mobile
-
-<img src="assets/projects/convite-rsvp/03-home-mobile.jpeg" width="300">
-
-</td>
-
-</tr>
-</table>
-
----
-
 ## 💼 Projetos Apresentados
 
 ### 🌐 Portfólio Profissional
