@@ -85,7 +85,7 @@ Além de servir como cartão de visitas digital, o projeto demonstra meus conhec
 
 ### 🖥️ Desktop
 
-<img src="screenshots/tela_inicial_desktop.png">
+<img src="assets/projects/convite-rsvp/02-home-desktop.png">
 
 </td>
 
@@ -93,7 +93,7 @@ Além de servir como cartão de visitas digital, o projeto demonstra meus conhec
 
 ### 📱 Mobile
 
-<img src="screenshots/tela_principal_mobile.jpeg" width="300">
+<img src="assets/projects/convite-rsvp/03-home-mobile.jpeg" width="300">
 
 </td>
 
@@ -162,9 +162,11 @@ Portfolio/
 ├── assets/
 ├── css/
 ├── js/
-├── screenshots/
-│   ├── tela_inicial_desktop.png
-│   └── tela_principal_mobile.jpg
+├── assets/
+│   └── projects/
+│       ├── convite-rsvp/
+│       ├── sistema-bancario-web/
+│       └── sistema-gestao-estoque/
 │
 ├── index.html
 └── README.md

@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Matheus Samuel é Desenvolvedor Java Full Stack com foco em Back-end Java, Spring Boot, React e PostgreSQL, criando aplicações modernas, APIs REST e software de qualidade.">
 
-    <title>Matheus Samuel | Desenvolvedor</title>
+    <title>Matheus Samuel | Desenvolvedor Java Full Stack</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
@@ -20,7 +26,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
 </head>
 
 <body>
@@ -35,18 +40,14 @@
         </div>
 
         <nav class="navbar">
-
-            <a href="#home">Início</a>
+            <a href="#home">In&iacute;cio</a>
             <a href="#sobre">Sobre</a>
-            <a href="#experiencia">Experiência</a>
+            <a href="#experiencia">Experi&ecirc;ncia</a>
             <a href="#projetos">Projetos</a>
-            <a href="#certificacoes">Certificações</a>
+            <a href="#certificacoes">Certifica&ccedil;&otilde;es</a>
             <a href="#tecnologias">Habilidades</a>
             <a href="#contato">Contato</a>
-
         </nav>
-
-        <!-- BOTÃO TEMA -->
 
         <div class="theme-toggle" id="themeToggle">
             <i class="fa-solid fa-moon"></i>
@@ -64,7 +65,7 @@
 
         <div class="hero-text">
 
-            <h3>Olá, eu sou</h3>
+            <span class="hero-eyebrow">Ol&aacute;, eu sou</span>
 
             <h1>
                 Matheus <span>Samuel</span>
@@ -72,76 +73,137 @@
 
             <h2>Desenvolvedor Java Full Stack</h2>
 
+            <div class="hero-proof" aria-label="Resumo profissional em destaque">
+                <p class="hero-proof__headline" id="heroProjectCount"
+                    data-suffix="projetos completos publicados • C&oacute;digo aberto • Deploy em produ&ccedil;&atilde;o">
+                    Projetos completos publicados • C&oacute;digo aberto • Deploy em produ&ccedil;&atilde;o
+                </p>
+                <p class="hero-proof__stack">
+                    Java • Spring Boot • React • PostgreSQL • Docker
+                </p>
+            </div>
+
             <p>
-                Apaixonado por tecnologia e desenvolvimento de soluções web modernas,
-                performáticas e intuitivas.
+                Apaixonado por tecnologia e desenvolvimento de solu&ccedil;&otilde;es web modernas,
+                perform&aacute;ticas e intuitivas.
             </p>
 
             <div class="hero-stack">
-
                 <span>Java</span>
                 <span>Spring Boot</span>
-                <span>Angular</span>
-                <span>SQL</span>
+                <span>React</span>
+                <span>Docker</span>
+                <span>PostgreSQL</span>
                 <span>Git</span>
-
             </div>
 
             <div class="hero-buttons">
-
                 <a href="#projetos" class="btn-primary">
                     Ver Projetos
                 </a>
 
-                <a href="assets/Curriculo_Matheus_Samuel_Baena.pdf" download class="btn-secondary">
-                    Download CV
-                </a>
+                <button type="button" class="btn-secondary btn-cv-preview" id="openResumeModal"
+                    aria-label="Visualizar curr&iacute;culo em modal">
+                    <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+                    Visualizar Curr&iacute;culo
+                </button>
 
+                <a href="assets/Curriculo_Matheus_Samuel_Baena.pdf" download class="btn-secondary btn-cv-download"
+                    aria-label="Baixar curr&iacute;culo em PDF">
+                    <i class="fa-solid fa-download" aria-hidden="true"></i>
+                    Download Curr&iacute;culo
+                </a>
             </div>
 
-            <div class="social-icons">
-
-                <a href="https://github.com/matheus-samuel-dev" target="_blank">
-
-                    <i class="fa-brands fa-github"></i>
-
+            <div class="social-links" aria-label="Redes sociais e contato">
+                <a href="https://github.com/matheus-samuel-dev" target="_blank" rel="noopener noreferrer"
+                    class="social-link-card" data-tooltip="Ver perfil no GitHub"
+                    aria-label="Abrir GitHub de Matheus Samuel em nova aba">
+                    <span class="social-link-card__icon" aria-hidden="true">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    <span class="social-link-card__content">
+                        <strong>GitHub</strong>
+                        <small>@matheus-samuel-dev</small>
+                    </span>
                 </a>
 
-                <a href="https://www.linkedin.com/in/matheus-samuel-dev" target="_blank">
-
-                    <i class="fa-brands fa-linkedin"></i>
-
+                <a href="https://www.linkedin.com/in/matheus-samuel-dev" target="_blank" rel="noopener noreferrer"
+                    class="social-link-card" data-tooltip="Ver perfil no LinkedIn"
+                    aria-label="Abrir LinkedIn de Matheus Samuel em nova aba">
+                    <span class="social-link-card__icon" aria-hidden="true">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </span>
+                    <span class="social-link-card__content">
+                        <strong>LinkedIn</strong>
+                        <small>/in/matheus-samuel-dev</small>
+                    </span>
                 </a>
 
-                <a href="mailto:matheussamuel05@gmail.com">
-
-                    <i class="fa-solid fa-envelope"></i>
-
+                <a href="mailto:matheussamuel05@gmail.com" class="social-link-card"
+                    data-tooltip="Enviar e-mail diretamente"
+                    aria-label="Enviar e-mail para Matheus Samuel">
+                    <span class="social-link-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span class="social-link-card__content">
+                        <strong>E-mail</strong>
+                        <small>matheussamuel05@gmail.com</small>
+                    </span>
                 </a>
-
             </div>
 
         </div>
 
         <div class="hero-image">
-
-            <img src="assets/matheus.jpeg" alt="Matheus Samuel">
-
+            <div class="hero-image-frame">
+                <img src="assets/matheus.jpeg" alt="Matheus Samuel">
+            </div>
         </div>
 
     </section>
 
+    <div class="resume-modal" id="resumeModal" hidden>
+        <div class="resume-modal__backdrop" data-close-resume-modal></div>
+        <div class="resume-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+            <div class="resume-modal__header">
+                <div>
+                    <p class="resume-modal__eyebrow">Curr&iacute;culo</p>
+                    <h3 id="resumeModalTitle">Visualiza&ccedil;&atilde;o do Curr&iacute;culo</h3>
+                </div>
+
+                <button type="button" class="resume-modal__close" id="closeResumeModal"
+                    aria-label="Fechar visualiza&ccedil;&atilde;o do curr&iacute;culo">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="resume-modal__content">
+                <iframe src="assets/Curriculo_Matheus_Samuel_Baena.pdf#view=FitH"
+                    title="Curr&iacute;culo de Matheus Samuel em PDF" loading="lazy"></iframe>
+            </div>
+
+            <div class="resume-modal__footer">
+                <p>Role para navegar entre as p&aacute;ginas do PDF.</p>
+                <a href="assets/Curriculo_Matheus_Samuel_Baena.pdf" download class="btn-primary">
+                    <i class="fa-solid fa-download" aria-hidden="true"></i>
+                    Download Curr&iacute;culo
+                </a>
+            </div>
+        </div>
+    </div>
+
     <section class="experiencia" id="experiencia">
 
         <div class="section-title">
-            <h2>Experiência Profissional</h2>
+            <h2>Experi&ecirc;ncia Profissional</h2>
         </div>
 
         <div class="experience-card">
 
             <h3>
                 <i class="fa-solid fa-briefcase"></i>
-                Estagiário de TI
+                Estagi&aacute;rio de TI
             </h3>
 
             <h4>Celesc</h4>
@@ -155,26 +217,24 @@
             </p>
 
             <p class="experience-description">
-                Atuação na área de Tecnologia da Informação com foco em suporte funcional,
-                análise de dados, desenvolvimento de dashboards e melhoria contínua de
+                Atua&ccedil;&atilde;o na &aacute;rea de Tecnologia da Informa&ccedil;&atilde;o com foco em suporte funcional,
+                an&aacute;lise de dados, desenvolvimento de dashboards e melhoria cont&iacute;nua de
                 processos internos.
             </p>
 
             <ul>
-                <li>Desenvolvimento e manutenção de dashboards utilizando Power BI</li>
-                <li>Manipulação, análise e organização de dados com Excel</li>
+                <li>Desenvolvimento e manuten&ccedil;&atilde;o de dashboards utilizando Power BI</li>
+                <li>Manipula&ccedil;&atilde;o, an&aacute;lise e organiza&ccedil;&atilde;o de dados com Excel</li>
                 <li>Suporte funcional e acompanhamento de aplicativo interno corporativo</li>
-                <li>Identificação, análise e reporte de bugs, além da sugestão de melhorias funcionais</li>
-                <li>Apoio na otimização de processos internos por meio de soluções orientadas a dados</li>
+                <li>Identifica&ccedil;&atilde;o, an&aacute;lise e reporte de bugs, al&eacute;m da sugest&atilde;o de melhorias funcionais</li>
+                <li>Apoio na otimiza&ccedil;&atilde;o de processos internos por meio de solu&ccedil;&otilde;es orientadas a dados</li>
             </ul>
 
             <div class="experience-techs">
-
                 <span>Power BI</span>
                 <span>Excel</span>
-                <span>Análise de Dados</span>
+                <span>An&aacute;lise de Dados</span>
                 <span>Suporte Funcional</span>
-
             </div>
 
         </div>
@@ -194,26 +254,101 @@
             <div class="sobre-text">
 
                 <p>
-                    Sou desenvolvedor Full Stack apaixonado por tecnologia e criação
-                    de soluções web modernas.
-
-                    Tenho experiência com Java, Spring Boot, JavaScript,
-                    Angular, bancos de dados relacionais e desenvolvimento
-                    de APIs REST.
-
-                    Atualmente busco oportunidades para evoluir minhas
-                    habilidades e contribuir em projetos desafiadores.
+                    Sou Desenvolvedor Java Full Stack apaixonado por criar aplica&ccedil;&otilde;es modernas,
+                    escal&aacute;veis e bem estruturadas.
                 </p>
 
-                <ul>
-                    <li>Java e Spring Boot</li>
-                    <li>HTML, CSS e JavaScript</li>
-                    <li>Angular</li>
-                    <li>Banco de Dados SQL</li>
-                </ul>
+                <p>
+                    Tenho experi&ecirc;ncia pr&aacute;tica no desenvolvimento de sistemas completos utilizando Java,
+                    Spring Boot, React e PostgreSQL, construindo APIs REST, interfaces responsivas e solu&ccedil;&otilde;es
+                    focadas em boas pr&aacute;ticas de arquitetura e experi&ecirc;ncia do usu&aacute;rio.
+                </p>
+
+                <p>
+                    Busco minha primeira oportunidade como Desenvolvedor Back-end Java ou Full Stack, onde eu possa
+                    contribuir com projetos desafiadores, evoluir tecnicamente e gerar impacto atrav&eacute;s de software
+                    de qualidade.
+                </p>
+
+                <p>
+                    Acredito que aprendizado cont&iacute;nuo, dedica&ccedil;&atilde;o e aten&ccedil;&atilde;o aos detalhes
+                    s&atilde;o diferenciais fundamentais para construir produtos confi&aacute;veis e experi&ecirc;ncias
+                    que realmente agreguem valor.
+                </p>
+
+                <div class="sobre-badges" aria-label="Principais compet&ecirc;ncias e valores profissionais">
+                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> APIs REST</span>
+                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Clean Code</span>
+                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Arquitetura em Camadas</span>
+                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Desenvolvimento Full Stack</span>
+                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Versionamento Git</span>
+                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Aprendizado Cont&iacute;nuo</span>
+                </div>
 
             </div>
 
+        </div>
+
+        <div class="about-expectations">
+            <div class="about-expectations__header">
+                <h3>O que voc&ecirc; pode esperar de mim</h3>
+                <p>
+                    Diferenciais que orientam minha forma de aprender, desenvolver software e colaborar em equipe.
+                </p>
+            </div>
+
+            <div class="about-expectations__grid">
+                <article class="expectation-card">
+                    <span class="expectation-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4.5 19.5c1.4-3.5 4-6.1 7.5-7.5" />
+                            <path d="M14 6l4-1 1 4-4 1" />
+                            <path d="M15 10l-5 5" />
+                            <path d="M5 14l5 5" />
+                            <path d="M12 7l5 5" />
+                        </svg>
+                    </span>
+                    <h4>Aprendizado r&aacute;pido</h4>
+                    <p>
+                        Aprendo novas tecnologias e regras de neg&oacute;cio com rapidez, adaptando-me facilmente a
+                        diferentes projetos e desafios.
+                    </p>
+                </article>
+
+                <article class="expectation-card">
+                    <span class="expectation-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                            <line x1="14" y1="4" x2="10" y2="20" />
+                        </svg>
+                    </span>
+                    <h4>C&oacute;digo de qualidade</h4>
+                    <p>
+                        Desenvolvo aplica&ccedil;&otilde;es priorizando organiza&ccedil;&atilde;o, boas pr&aacute;ticas,
+                        Clean Code, arquitetura em camadas e facilidade de manuten&ccedil;&atilde;o.
+                    </p>
+                </article>
+
+                <article class="expectation-card">
+                    <span class="expectation-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </span>
+                    <h4>Colabora&ccedil;&atilde;o</h4>
+                    <p>
+                        Valorizo comunica&ccedil;&atilde;o clara, trabalho em equipe, responsabilidade e melhoria
+                        cont&iacute;nua para entregar solu&ccedil;&otilde;es de qualidade.
+                    </p>
+                </article>
+            </div>
         </div>
 
     </section>
@@ -228,11 +363,70 @@
 
         <div class="projects-grid">
 
-            <!-- CARD -->
+            <article class="project-card">
 
-            <div class="project-card">
+                <div class="project-carousel" data-carousel aria-label="Galeria do projeto Sistema Banc&aacute;rio Web"
+                    tabindex="0">
+                    <div class="carousel-viewport">
+                        <div class="carousel-slides">
+                            <figure class="carousel-slide is-active">
+                                <img src="assets/projects/sistema-bancario-web/01-tela-inicial.png"
+                                    alt="Sistema Banc&aacute;rio Web - tela inicial" loading="lazy"
+                                    decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-bancario-web/02-dashboard.png"
+                                    alt="Sistema Banc&aacute;rio Web - dashboard" loading="lazy"
+                                    decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-bancario-web/03-minha-conta.png"
+                                    alt="Sistema Banc&aacute;rio Web - minha conta" loading="lazy"
+                                    decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-bancario-web/04-transferencia.png"
+                                    alt="Sistema Banc&aacute;rio Web - transfer&ecirc;ncia" loading="lazy"
+                                    decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-bancario-web/05-extrato.png"
+                                    alt="Sistema Banc&aacute;rio Web - extrato completo" loading="lazy"
+                                    decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-bancario-web/06-painel-administrativo.png"
+                                    alt="Sistema Banc&aacute;rio Web - painel administrativo" loading="lazy"
+                                    decoding="async">
+                            </figure>
+                        </div>
 
-                <img src="assets/projects/sistema-bancario-cover.png" alt="Sistema Bancário em Python">
+                        <button class="carousel-arrow carousel-arrow--prev" type="button"
+                            aria-label="Ver imagem anterior do projeto Sistema Banc&aacute;rio Web">
+                            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+
+                        <button class="carousel-arrow carousel-arrow--next" type="button"
+                            aria-label="Ver pr&oacute;xima imagem do projeto Sistema Banc&aacute;rio Web">
+                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="carousel-dots" aria-label="Navega&ccedil;&atilde;o do carrossel do Sistema Banc&aacute;rio Web">
+                        <button class="carousel-dot is-active" type="button"
+                            aria-label="Exibir tela inicial do Sistema Banc&aacute;rio Web" aria-current="true"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir dashboard do Sistema Banc&aacute;rio Web"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir tela minha conta do Sistema Banc&aacute;rio Web"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir tela de transfer&ecirc;ncia do Sistema Banc&aacute;rio Web"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir tela de extrato do Sistema Banc&aacute;rio Web"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir painel administrativo do Sistema Banc&aacute;rio Web"></button>
+                    </div>
+                </div>
 
                 <div class="project-info">
 
@@ -240,65 +434,99 @@
                         <span class="project-icon project-icon--bank" aria-hidden="true">
                             <i class="fa-solid fa-building-columns"></i>
                         </span>
-                        <h3>Sistema Bancário em Python</h3>
+                        <h3>Sistema Banc&aacute;rio Web</h3>
                     </div>
 
-                    <p>
-                        Sistema bancário desktop desenvolvido em Python utilizando
-                        Programação Orientada a Objetos, com funcionalidades de
-                        criação de contas, depósitos, saques, transferências e extrato.
+                    <p class="project-description">
+                        Sistema banc&aacute;rio web inspirado em internet banking reais. Possui autentica&ccedil;&atilde;o,
+                        &aacute;rea do usu&aacute;rio, painel administrativo, dep&oacute;sitos, saques, transfer&ecirc;ncias,
+                        extrato completo, exporta&ccedil;&atilde;o de PDF e gerenciamento de contas.
                     </p>
 
                     <div class="project-techs">
-                        <span>Python</span>
-                        <span>POO</span>
-                        <span>Tkinter</span>
-                        <span>JSON</span>
+                        <span>React</span>
+                        <span>Vite</span>
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+                        <span>LocalStorage</span>
                     </div>
 
                     <div class="project-buttons">
-
                         <a href="https://github.com/matheus-samuel-dev/sistema-bancario-python" target="_blank"
-                            class="btn-github">
-                            <i class="fa-brands fa-github"></i>
-                            Ver no GitHub
+                            rel="noopener noreferrer" class="btn-github"
+                            aria-label="Abrir GitHub do projeto Sistema Banc&aacute;rio Web em nova aba">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            GitHub
                         </a>
 
-                        <a href="demo-sistema-bancario.html" target="_blank" class="btn-demo">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            Ver Demonstração
+                        <a href="https://sistema-bancario-python.vercel.app" target="_blank"
+                            rel="noopener noreferrer" class="btn-demo"
+                            aria-label="Abrir demonstra&ccedil;&atilde;o do projeto Sistema Banc&aacute;rio Web em nova aba">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            Demonstra&ccedil;&atilde;o
                         </a>
-
                     </div>
 
                 </div>
 
-            </div>
+            </article>
 
+            <article class="project-card">
 
+                <div class="project-carousel" data-carousel aria-label="Galeria do projeto Convite RSVP"
+                    tabindex="0">
+                    <div class="carousel-viewport">
+                        <div class="carousel-slides">
+                            <figure class="carousel-slide is-active">
+                                <img src="assets/projects/convite-rsvp/01-tela-inicial.png"
+                                    alt="Convite RSVP - tela inicial" loading="lazy"
+                                    decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/convite-rsvp/02-contagem-regressiva.png"
+                                    alt="Convite RSVP - contagem regressiva" loading="lazy" decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/convite-rsvp/03-confirmacao-rsvp.png"
+                                    alt="Convite RSVP - confirma&ccedil;&atilde;o RSVP" loading="lazy"
+                                    decoding="async">
+                            </figure>
+                        </div>
 
-            <!-- CARD -->
+                        <button class="carousel-arrow carousel-arrow--prev" type="button"
+                            aria-label="Ver imagem anterior do projeto Convite RSVP">
+                            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                        </button>
 
-            <!-- CARD -->
+                        <button class="carousel-arrow carousel-arrow--next" type="button"
+                            aria-label="Ver pr&oacute;xima imagem do projeto Convite RSVP">
+                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
 
-            <div class="project-card">
-
-                <img src="assets/projects/pagina_principal_convite_desktop.png" alt="Convite de Aniversário RSVP">
+                    <div class="carousel-dots" aria-label="Navega&ccedil;&atilde;o do carrossel do Convite RSVP">
+                        <button class="carousel-dot is-active" type="button" aria-label="Exibir tela inicial do Convite RSVP"
+                            aria-current="true"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir tela de contagem regressiva do Convite RSVP"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir tela de confirma&ccedil;&atilde;o do Convite RSVP"></button>
+                    </div>
+                </div>
 
                 <div class="project-info">
 
                     <div class="project-title">
                         <span class="project-icon project-icon--event" aria-hidden="true">
-                            <i class="fa-solid fa-calendar-check"></i>
+                            <i class="fa-solid fa-calendar-days"></i>
                         </span>
-                        <h3>Convite de Aniversário RSVP</h3>
+                        <h3>Convite de Anivers&aacute;rio RSVP</h3>
                     </div>
 
-                    <p>
-                        Sistema web responsivo desenvolvido para gerenciamento de convidados
-                        e confirmação de presença em eventos. Possui formulário RSVP,
-                        painel administrativo, controle de confirmações e armazenamento
-                        de dados em nuvem.
+                    <p class="project-description">
+                        Sistema web responsivo desenvolvido para gerenciamento de convidados e confirma&ccedil;&atilde;o
+                        de presen&ccedil;a em eventos. Possui formul&aacute;rio RSVP, painel administrativo, controle
+                        de confirma&ccedil;&otilde;es e armazenamento de dados em nuvem.
                     </p>
 
                     <div class="project-techs">
@@ -309,27 +537,86 @@
                     </div>
 
                     <div class="project-buttons">
-
                         <a href="https://github.com/matheus-samuel-dev/convite-aniversario" target="_blank"
-                            class="btn-github">
-                            <i class="fa-brands fa-github"></i>
-                            Ver no GitHub
+                            rel="noopener noreferrer" class="btn-github"
+                            aria-label="Abrir GitHub do projeto Convite de Anivers&aacute;rio RSVP em nova aba">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            GitHub
                         </a>
 
-                        <a href="https://convite-aniversario-9398f.web.app" target="_blank" class="btn-demo">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            Ver Demonstração
+                        <a href="https://convite-aniversario-9398f.web.app" target="_blank"
+                            rel="noopener noreferrer" class="btn-demo"
+                            aria-label="Abrir demonstra&ccedil;&atilde;o do projeto Convite de Anivers&aacute;rio RSVP em nova aba">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            Demonstra&ccedil;&atilde;o
                         </a>
-
                     </div>
 
                 </div>
 
-            </div>
+            </article>
 
-            <div class="project-card">
+            <article class="project-card project-card--featured">
 
-                <img src="assets/projects/Carrossel_Sistema_gestao_estoque.png" alt="Sistema de Gest&atilde;o de Estoque">
+                <span class="project-badge">DESTAQUE</span>
+
+                <div class="project-carousel" data-carousel
+                    aria-label="Galeria do projeto Sistema de Gest&atilde;o de Estoque" tabindex="0">
+                    <div class="carousel-viewport">
+                        <div class="carousel-slides">
+                            <figure class="carousel-slide is-active">
+                                <img src="assets/projects/sistema-gestao-estoque/01-tela-inicial.png"
+                                    alt="Sistema de Gest&atilde;o de Estoque - tela inicial" loading="lazy"
+                                    decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-gestao-estoque/02-dashboard.png"
+                                    alt="Sistema de Gest&atilde;o de Estoque - dashboard"
+                                    loading="lazy" decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-gestao-estoque/03-categorias.png"
+                                    alt="Sistema de Gest&atilde;o de Estoque - categorias"
+                                    loading="lazy" decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-gestao-estoque/04-configuracoes.png"
+                                    alt="Sistema de Gest&atilde;o de Estoque - configura&ccedil;&otilde;es"
+                                    loading="lazy" decoding="async">
+                            </figure>
+                            <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-gestao-estoque/05-movimentacoes.png"
+                                    alt="Sistema de Gest&atilde;o de Estoque - movimenta&ccedil;&otilde;es"
+                                    loading="lazy" decoding="async">
+                            </figure>
+                        </div>
+
+                        <button class="carousel-arrow carousel-arrow--prev" type="button"
+                            aria-label="Ver imagem anterior do projeto Sistema de Gest&atilde;o de Estoque">
+                            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+
+                        <button class="carousel-arrow carousel-arrow--next" type="button"
+                            aria-label="Ver pr&oacute;xima imagem do projeto Sistema de Gest&atilde;o de Estoque">
+                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="carousel-dots"
+                        aria-label="Navega&ccedil;&atilde;o do carrossel do Sistema de Gest&atilde;o de Estoque">
+                        <button class="carousel-dot is-active" type="button"
+                            aria-label="Exibir tela inicial do Sistema de Gest&atilde;o de Estoque"
+                            aria-current="true"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir dashboard do Sistema de Gest&atilde;o de Estoque"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir categorias do Sistema de Gest&atilde;o de Estoque"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir configura&ccedil;&otilde;es do Sistema de Gest&atilde;o de Estoque"></button>
+                        <button class="carousel-dot" type="button"
+                            aria-label="Exibir movimenta&ccedil;&otilde;es do Sistema de Gest&atilde;o de Estoque"></button>
+                    </div>
+                </div>
 
                 <div class="project-info">
 
@@ -340,14 +627,12 @@
                         <h3>Sistema de Gest&atilde;o de Estoque</h3>
                     </div>
 
-                    <p>
-                        Sistema completo de gest&atilde;o de estoque desenvolvido com Java,
-                        Spring Boot, React e PostgreSQL. Possui autentica&ccedil;&atilde;o JWT,
-                        controle de produtos e categorias, registro de movimenta&ccedil;&otilde;es
-                        de entrada e sa&iacute;da, dashboard com indicadores em tempo real,
-                        exporta&ccedil;&atilde;o de relat&oacute;rios em PDF e Excel, controle
-                        de permiss&otilde;es por usu&aacute;rio e interface moderna totalmente
-                        responsiva.
+                    <p class="project-description">
+                        Sistema completo de gest&atilde;o de estoque desenvolvido com Java, Spring Boot, React e
+                        PostgreSQL. Possui autentica&ccedil;&atilde;o JWT, controle de produtos e categorias, registro
+                        de movimenta&ccedil;&otilde;es de entrada e sa&iacute;da, dashboard com indicadores em tempo real,
+                        exporta&ccedil;&atilde;o de relat&oacute;rios em PDF e Excel, controle de permiss&otilde;es por
+                        usu&aacute;rio e interface moderna totalmente responsiva.
                     </p>
 
                     <div class="project-techs">
@@ -362,25 +647,24 @@
                     </div>
 
                     <div class="project-buttons">
-
                         <a href="https://github.com/matheus-samuel-dev/sistema-gestao-estoque" target="_blank"
-                            class="btn-github">
-                            <i class="fa-brands fa-github"></i>
-                            Ver no GitHub
+                            rel="noopener noreferrer" class="btn-github"
+                            aria-label="Abrir GitHub do projeto Sistema de Gest&atilde;o de Estoque em nova aba">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            GitHub
                         </a>
 
-                        <a href="https://sistema-gestao-estoque-two.vercel.app" target="_blank" class="btn-demo">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            Ver Demonstra&ccedil;&atilde;o
+                        <a href="https://sistema-gestao-estoque-two.vercel.app" target="_blank"
+                            rel="noopener noreferrer" class="btn-demo"
+                            aria-label="Abrir demonstra&ccedil;&atilde;o do projeto Sistema de Gest&atilde;o de Estoque em nova aba">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            Demonstra&ccedil;&atilde;o
                         </a>
-
                     </div>
 
                 </div>
 
-            </div>
-
-        </div>
+            </article>
 
         </div>
 
@@ -389,7 +673,7 @@
     <section class="certificacoes" id="certificacoes">
 
         <div class="section-title">
-            <h2>Certificações</h2>
+            <h2>Certifica&ccedil;&otilde;es</h2>
         </div>
 
         <div class="cert-grid">
@@ -405,7 +689,7 @@
             </div>
 
             <div class="cert-card">
-                <h3>Excel Básico</h3>
+                <h3>Excel B&aacute;sico</h3>
                 <p>Senac • 30h</p>
             </div>
 
@@ -423,32 +707,42 @@
 
         <div class="tech-grid">
 
-            <div class="tech-card">
-                <i class="fa-brands fa-html5"></i>
-                <p>HTML</p>
-            </div>
-
-            <div class="tech-card">
-                <i class="fa-brands fa-css3-alt"></i>
-                <p>CSS</p>
-            </div>
-
-            <div class="tech-card">
-                <i class="fa-brands fa-js"></i>
-                <p>JavaScript</p>
-            </div>
-
-            <div class="tech-card">
+            <div class="tech-card tech-card--core tech-card--java">
                 <i class="fa-brands fa-java"></i>
                 <p>Java</p>
             </div>
 
-            <div class="tech-card">
+            <div class="tech-card tech-card--core tech-card--spring">
+                <i class="fa-solid fa-leaf"></i>
+                <p>Spring Boot</p>
+            </div>
+
+            <div class="tech-card tech-card--core tech-card--react">
+                <i class="fa-brands fa-react"></i>
+                <p>React</p>
+            </div>
+
+            <div class="tech-card tech-card--core tech-card--postgres">
+                <i class="fa-solid fa-database"></i>
+                <p>PostgreSQL</p>
+            </div>
+
+            <div class="tech-card tech-card--core tech-card--docker">
+                <i class="fa-brands fa-docker"></i>
+                <p>Docker</p>
+            </div>
+
+            <div class="tech-card tech-card--javascript">
+                <i class="fa-brands fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+
+            <div class="tech-card tech-card--git">
                 <i class="fa-brands fa-git-alt"></i>
                 <p>Git</p>
             </div>
 
-            <div class="tech-card">
+            <div class="tech-card tech-card--github">
                 <i class="fa-brands fa-github"></i>
                 <p>GitHub</p>
             </div>
@@ -467,21 +761,13 @@
 
             <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
 
-                <!-- Chave do Web3Forms -->
                 <input type="hidden" name="access_key" value="f4fa1f68-71eb-401d-8345-98f2178c67a4">
-
                 <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
-                <!-- Opcional: assunto do e-mail -->
-                <input type="hidden" name="subject" value="Nova mensagem do Portfólio">
-
-                <!-- Opcional: evitar spam -->
+                <input type="hidden" name="subject" value="Nova mensagem do Portf&oacute;lio">
                 <input type="checkbox" name="botcheck" style="display: none;">
 
                 <input type="text" name="name" placeholder="Seu nome" required>
-
                 <input type="email" name="email" placeholder="Seu e-mail" required>
-
                 <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
 
                 <button type="submit">
@@ -495,17 +781,18 @@
     </section>
 
     <!-- FOOTER -->
+
     <footer class="footer">
 
-        <p>© 2026 - Matheus Samuel</p>
+        <p>&copy; 2026 - Matheus Samuel</p>
 
         <div class="footer-links">
 
-            <a href="https://github.com/matheus-samuel-dev" target="_blank">
+            <a href="https://github.com/matheus-samuel-dev" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-github"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/matheus-samuel-dev" target="_blank">
+            <a href="https://www.linkedin.com/in/matheus-samuel-dev" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
 
@@ -517,11 +804,10 @@
 
     </footer>
 
+    <!-- BOTAO TOPO -->
 
-    <!-- BOTÃO TOPO -->
-
-    <button id="backToTop">
-        ↑
+    <button id="backToTop" aria-label="Voltar ao topo">
+        &uarr;
     </button>
 
     <!-- JAVASCRIPT -->
