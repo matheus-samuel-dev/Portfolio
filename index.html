@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Matheus Samuel é Desenvolvedor Java Full Stack com foco em Back-end Java, Spring Boot, React e PostgreSQL, criando aplicações modernas, APIs REST e software de qualidade.">
+        content="Portf&oacute;lio de Matheus Samuel, Desenvolvedor Java Full Stack com projetos em Java, Spring Boot, React, PostgreSQL, Docker e deploy em produ&ccedil;&atilde;o.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Matheus Samuel | Desenvolvedor Java Full Stack">
+    <meta property="og:description"
+        content="Portf&oacute;lio de Matheus Samuel, Desenvolvedor Java Full Stack com projetos em Java, Spring Boot, React, PostgreSQL, Docker e deploy em produ&ccedil;&atilde;o.">
+    <meta property="og:image" content="assets/matheus.jpeg">
 
     <title>Matheus Samuel | Desenvolvedor Java Full Stack</title>
 
@@ -14,805 +20,889 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+    <header class="header" id="header">
+        <a href="#home" class="logo" data-i18n-attr="aria-label" data-i18n-key="a11y.homeLink">
+            <span class="logo__mark" aria-hidden="true">MS</span>
+            <span class="logo__text">
+                <strong>Matheus Samuel</strong>
+                <small data-i18n="header.role">Java Full Stack</small>
+            </span>
+        </a>
 
-    <!-- HEADER -->
-
-    <header class="header">
-
-        <div class="logo">
-            <span>MS</span>
-            <h2>Dev Portfolio</h2>
-        </div>
-
-        <nav class="navbar">
-            <a href="#home">In&iacute;cio</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#tecnologias">Habilidades</a>
-            <a href="#experiencia">Experi&ecirc;ncia</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#certificacoes">Certifica&ccedil;&otilde;es</a>
-            <a href="#contato">Contato</a>
+        <nav class="navbar" id="primaryNavigation" aria-label="Navega&ccedil;&atilde;o principal"
+            data-i18n-attr="aria-label" data-i18n-key="a11y.primaryNavigation">
+            <a href="#home" data-i18n="nav.home">In&iacute;cio</a>
+            <a href="#sobre" data-i18n="nav.about">Sobre</a>
+            <a href="#tecnologias" data-i18n="nav.technologies">Tecnologias</a>
+            <a href="#experiencia" data-i18n="nav.experience">Experi&ecirc;ncia</a>
+            <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+            <a href="#certificacoes" data-i18n="nav.certificates">Certifica&ccedil;&otilde;es</a>
+            <a href="#contato" data-i18n="nav.contact">Contato</a>
         </nav>
 
-        <div class="theme-toggle" id="themeToggle">
-            <i class="fa-solid fa-moon"></i>
-        </div>
-
-        <div class="menu-mobile" id="menuButton">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-
-    </header>
-
-    <!-- HERO -->
-
-    <section class="hero" id="home">
-
-        <div class="hero-text">
-
-            <span class="hero-eyebrow">Ol&aacute;, eu sou</span>
-
-            <h1>
-                Matheus <span>Samuel</span>
-            </h1>
-
-            <h2>Desenvolvedor Java Full Stack</h2>
-
-            <div class="hero-proof" aria-label="Resumo profissional em destaque">
-                <p class="hero-proof__headline" id="heroProjectCount"
-                    data-suffix="projetos completos publicados • C&oacute;digo aberto • Deploy em produ&ccedil;&atilde;o">
-                    Projetos completos publicados • C&oacute;digo aberto • Deploy em produ&ccedil;&atilde;o
-                </p>
-                <p class="hero-proof__stack">
-                    Java • Spring Boot • React • PostgreSQL • Docker
-                </p>
-            </div>
-
-            <p>
-                Apaixonado por tecnologia e desenvolvimento de solu&ccedil;&otilde;es web modernas,
-                perform&aacute;ticas e intuitivas.
-            </p>
-
-            <div class="hero-stack">
-                <span>Java</span>
-                <span>Spring Boot</span>
-                <span>React</span>
-                <span>Docker</span>
-                <span>PostgreSQL</span>
-                <span>Git</span>
-            </div>
-
-            <div class="hero-buttons">
-                <a href="#projetos" class="btn-primary">
-                    Ver Projetos
-                </a>
-
-                <button type="button" class="btn-secondary btn-cv-preview" id="openResumeModal"
-                    aria-label="Visualizar curr&iacute;culo em modal">
-                    <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
-                    Visualizar Curr&iacute;culo
+        <div class="header-actions">
+            <div class="language-switcher" id="languageSwitcher">
+                <button class="language-button" type="button" id="languageButton" aria-haspopup="true"
+                    aria-expanded="false" aria-controls="languageMenu" data-i18n-attr="aria-label"
+                    data-i18n-key="a11y.languageButton">
+                    <span class="language-button__flag" id="languageButtonFlag" aria-hidden="true">&#x1F1E7;&#x1F1F7;</span>
+                    <span class="language-button__label" id="languageButtonLabel">Portugu&ecirc;s</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                 </button>
 
-                <a href="assets/Curriculo_Matheus_Samuel_Baena.pdf" download class="btn-secondary btn-cv-download"
-                    aria-label="Baixar curr&iacute;culo em PDF">
-                    <i class="fa-solid fa-download" aria-hidden="true"></i>
-                    Download Curr&iacute;culo
-                </a>
+                <div class="language-menu" id="languageMenu" role="menu" hidden></div>
             </div>
 
-            <div class="social-links" aria-label="Redes sociais e contato">
-                <a href="https://github.com/matheus-samuel-dev" target="_blank" rel="noopener noreferrer"
-                    class="social-link-card" data-tooltip="Ver perfil no GitHub"
-                    aria-label="Abrir GitHub de Matheus Samuel em nova aba">
-                    <span class="social-link-card__icon" aria-hidden="true">
-                        <i class="fa-brands fa-github"></i>
-                    </span>
-                    <span class="social-link-card__content">
-                        <strong>GitHub</strong>
-                        <small>@matheus-samuel-dev</small>
-                    </span>
-                </a>
+            <button class="theme-toggle" id="themeToggle" type="button" data-i18n-attr="aria-label"
+                data-i18n-key="a11y.themeToggleDark">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
 
-                <a href="https://www.linkedin.com/in/matheus-samuel-dev" target="_blank" rel="noopener noreferrer"
-                    class="social-link-card" data-tooltip="Ver perfil no LinkedIn"
-                    aria-label="Abrir LinkedIn de Matheus Samuel em nova aba">
-                    <span class="social-link-card__icon" aria-hidden="true">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </span>
-                    <span class="social-link-card__content">
-                        <strong>LinkedIn</strong>
-                        <small>/in/matheus-samuel-dev</small>
-                    </span>
-                </a>
-
-                <a href="mailto:matheussamuel05@gmail.com" class="social-link-card"
-                    data-tooltip="Enviar e-mail diretamente"
-                    aria-label="Enviar e-mail para Matheus Samuel">
-                    <span class="social-link-card__icon" aria-hidden="true">
-                        <i class="fa-solid fa-envelope"></i>
-                    </span>
-                    <span class="social-link-card__content">
-                        <strong>E-mail</strong>
-                        <small>matheussamuel05@gmail.com</small>
-                    </span>
-                </a>
-            </div>
-
+            <button class="menu-mobile" id="menuButton" type="button" aria-controls="primaryNavigation"
+                aria-expanded="false" data-i18n-attr="aria-label" data-i18n-key="a11y.openMenu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
+    </header>
 
-        <div class="hero-image">
-            <div class="hero-image-frame">
-                <img src="assets/matheus.jpeg" alt="Matheus Samuel">
+    <main>
+        <section class="hero" id="home">
+            <div class="hero__ambient" aria-hidden="true"></div>
+
+            <div class="hero__content">
+                <div class="hero__text">
+                    <span class="section-kicker" data-i18n="hero.eyebrow">Portf&oacute;lio profissional</span>
+
+                    <h1 data-i18n="hero.title">Matheus Samuel</h1>
+                    <p class="hero__role" data-i18n="hero.subtitle">Desenvolvedor Java Full Stack</p>
+                    <p class="hero__description" data-i18n="hero.description">
+                        Desenvolvo aplica&ccedil;&otilde;es web completas com Java, Spring Boot, React e PostgreSQL,
+                        criando APIs seguras, interfaces responsivas e sistemas com autentica&ccedil;&atilde;o,
+                        dashboards, relat&oacute;rios, Docker e deploy em produ&ccedil;&atilde;o.
+                    </p>
+
+                    <div class="hero__actions" aria-label="A&ccedil;&otilde;es principais"
+                        data-i18n-attr="aria-label" data-i18n-key="a11y.heroActions">
+                        <a href="#projetos" class="btn btn-primary" data-i18n="hero.ctaProjects">Ver Projetos</a>
+                        <a href="https://github.com/matheus-samuel-dev" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary" data-i18n="hero.ctaGithub" data-i18n-attr="aria-label"
+                            data-i18n-key="a11y.githubProfile">GitHub</a>
+                        <a href="https://www.linkedin.com/in/matheus-samuel-dev" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-secondary" data-i18n="hero.ctaLinkedin"
+                            data-i18n-attr="aria-label" data-i18n-key="a11y.linkedinProfile">LinkedIn</a>
+                        <a href="assets/cv/curriculo-matheus-samuel.pdf" download
+                            class="btn btn-outline btn-cv-download" data-cv-link data-i18n="buttons.downloadCv"
+                            data-i18n-attr="aria-label" data-i18n-key="a11y.downloadCv">Baixar Curr&iacute;culo</a>
+                    </div>
+
+                    <button type="button" class="resume-preview-link" id="openResumeModal"
+                        data-i18n="hero.previewResume" data-i18n-attr="aria-label" data-i18n-key="a11y.previewCv">
+                        Visualizar curr&iacute;culo em PDF
+                    </button>
+
+                    <ul class="hero__stack" aria-label="Tecnologias principais" data-i18n-attr="aria-label"
+                        data-i18n-key="a11y.mainStack">
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>React</li>
+                        <li>PostgreSQL</li>
+                        <li>Docker</li>
+                        <li>JWT</li>
+                    </ul>
+                </div>
+
+                <div class="hero__visual" aria-label="Resumo visual do perfil profissional"
+                    data-i18n-attr="aria-label" data-i18n-key="a11y.heroVisual">
+                    <div class="profile-card">
+                        <img src="assets/matheus.jpeg" width="1254" height="1254"
+                            alt="Foto profissional de Matheus Samuel" decoding="async" fetchpriority="high"
+                            data-i18n-attr="alt" data-i18n-key="alts.profilePhoto">
+                        <div class="profile-card__content">
+                            <span class="profile-card__status" data-i18n="hero.availability">Aberto a oportunidades</span>
+                            <strong data-i18n="hero.profileFocus">Back-end Java / Full Stack J&uacute;nior</strong>
+                        </div>
+                    </div>
+
+                    <div class="architecture-card">
+                        <div class="architecture-card__header">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="architecture-card__body">
+                            <p><strong data-i18n="hero.architectureTitle">Arquitetura aplicada</strong></p>
+                            <div class="architecture-flow">
+                                <span data-i18n="hero.architectureApi">API REST segura</span>
+                                <span data-i18n="hero.architectureAuth">JWT e permiss&otilde;es</span>
+                                <span data-i18n="hero.architectureData">PostgreSQL em produ&ccedil;&atilde;o</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-    </section>
+        <section class="metrics section-shell" aria-label="M&eacute;tricas profissionais" data-i18n-attr="aria-label"
+            data-i18n-key="a11y.metricsSection">
+            <div class="metrics-grid">
+                <article class="metric-card">
+                    <span class="metric-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </span>
+                    <strong data-i18n="metrics.projectsValue">6+</strong>
+                    <span data-i18n="metrics.projectsLabel">Projetos desenvolvidos</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+                    <strong data-i18n="metrics.fullstackValue">3+</strong>
+                    <span data-i18n="metrics.fullstackLabel">Sistemas full stack</span>
+                </article>
+                <article class="metric-card">
+                    <span class="metric-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </span>
+                    <strong data-i18n="metrics.techValue">10+</strong>
+                    <span data-i18n="metrics.techLabel">Tecnologias utilizadas</span>
+                </article>
+                <article class="metric-card metric-card--wide">
+                    <span class="metric-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </span>
+                    <strong data-i18n="metrics.practiceValue">Deploy</strong>
+                    <span data-i18n="metrics.practiceLabel">Projetos publicados em produ&ccedil;&atilde;o</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="sobre section-shell" id="sobre">
+            <div class="section-title">
+                <span class="section-kicker" data-i18n="about.eyebrow">Sobre mim</span>
+                <h2 data-i18n="about.title">Desenvolvedor em forma&ccedil;&atilde;o com foco em produto real</h2>
+            </div>
+
+            <div class="about-layout">
+                <div class="about-card">
+                    <p data-i18n="about.paragraph1">
+                        Sou Desenvolvedor Java Full Stack em forma&ccedil;&atilde;o, com foco na constru&ccedil;&atilde;o
+                        de aplica&ccedil;&otilde;es web completas utilizando Java, Spring Boot, React e PostgreSQL.
+                    </p>
+                    <p data-i18n="about.paragraph2">
+                        Tenho experi&ecirc;ncia pr&aacute;tica com APIs REST, autentica&ccedil;&atilde;o JWT,
+                        dashboards, relat&oacute;rios, Docker, deploy em produ&ccedil;&atilde;o e integra&ccedil;&atilde;o
+                        front-end/back-end.
+                    </p>
+                    <p data-i18n="about.paragraph3">
+                        Meu objetivo &eacute; atuar como Desenvolvedor Back-end Java ou Full Stack J&uacute;nior,
+                        contribuindo em times que valorizam c&oacute;digo organizado, aprendizado cont&iacute;nuo e
+                        solu&ccedil;&otilde;es com impacto real.
+                    </p>
+                </div>
+
+                <div class="about-highlights" aria-label="Principais compet&ecirc;ncias" data-i18n-attr="aria-label"
+                    data-i18n-key="a11y.aboutHighlights">
+                    <span><i class="fa-solid fa-check" aria-hidden="true"></i> APIs REST</span>
+                    <span><i class="fa-solid fa-check" aria-hidden="true"></i> Spring Security</span>
+                    <span><i class="fa-solid fa-check" aria-hidden="true"></i> JWT</span>
+                    <span><i class="fa-solid fa-check" aria-hidden="true"></i> Dashboards</span>
+                    <span><i class="fa-solid fa-check" aria-hidden="true"></i> Deploy</span>
+                    <span><i class="fa-solid fa-check" aria-hidden="true"></i> Git/GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="work-style section-shell" id="forma-de-trabalhar">
+            <div class="section-title">
+                <span class="section-kicker" data-i18n="workStyle.eyebrow">Minha forma de trabalhar</span>
+                <h2 data-i18n="workStyle.title">Construindo software com clareza, evolu&ccedil;&atilde;o e contexto</h2>
+            </div>
+
+            <div class="work-grid">
+                <article class="work-card">
+                    <i class="fa-solid fa-code" aria-hidden="true"></i>
+                    <h3 data-i18n="workStyle.organized.title">C&oacute;digo organizado</h3>
+                    <p data-i18n="workStyle.organized.text">
+                        Priorizo estrutura clara, separa&ccedil;&atilde;o de responsabilidades e padr&otilde;es que
+                        facilitam manuten&ccedil;&atilde;o.
+                    </p>
+                </article>
+                <article class="work-card">
+                    <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
+                    <h3 data-i18n="workStyle.learning.title">Aprendizado cont&iacute;nuo</h3>
+                    <p data-i18n="workStyle.learning.text">
+                        Evoluo com estudo consistente, pr&aacute;tica em projetos completos e abertura para feedback.
+                    </p>
+                </article>
+                <article class="work-card">
+                    <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+                    <h3 data-i18n="workStyle.product.title">Foco em produto real</h3>
+                    <p data-i18n="workStyle.product.text">
+                        Penso em usabilidade, seguran&ccedil;a, dados e deploy para criar solu&ccedil;&otilde;es que
+                        funcionam fora do ambiente acad&ecirc;mico.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="tecnologias section-shell" id="tecnologias">
+            <div class="section-title">
+                <span class="section-kicker" data-i18n="technologies.eyebrow">Stack t&eacute;cnica</span>
+                <h2 data-i18n="technologies.title">Tecnologias organizadas por contexto de uso</h2>
+            </div>
+
+            <div class="tech-categories">
+                <article class="tech-category">
+                    <h3><i class="fa-solid fa-server" aria-hidden="true"></i><span data-i18n="technologies.backend">Back-end</span></h3>
+                    <div class="tag-list">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>Spring Security</span>
+                        <span>JWT</span>
+                        <span>JPA/Hibernate</span>
+                    </div>
+                </article>
+                <article class="tech-category">
+                    <h3><i class="fa-solid fa-display" aria-hidden="true"></i><span data-i18n="technologies.frontend">Front-end</span></h3>
+                    <div class="tag-list">
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Material UI</span>
+                    </div>
+                </article>
+                <article class="tech-category">
+                    <h3><i class="fa-solid fa-database" aria-hidden="true"></i><span data-i18n="technologies.database">Banco de Dados</span></h3>
+                    <div class="tag-list">
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                    </div>
+                </article>
+                <article class="tech-category">
+                    <h3><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i><span data-i18n="technologies.tools">Ferramentas</span></h3>
+                    <div class="tag-list">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Docker</span>
+                        <span>Railway</span>
+                        <span>Vercel</span>
+                        <span>Postman</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="experiencia section-shell" id="experiencia">
+            <div class="section-title">
+                <span class="section-kicker" data-i18n="experience.eyebrow">Experi&ecirc;ncia</span>
+                <h2 data-i18n="experience.title">Viv&ecirc;ncia pr&aacute;tica com dados, sistemas e melhoria de processos</h2>
+            </div>
+
+            <article class="experience-card">
+                <div class="experience-card__header">
+                    <div>
+                        <h3><i class="fa-solid fa-briefcase" aria-hidden="true"></i><span data-i18n="experience.role">Estagi&aacute;rio de TI</span></h3>
+                        <p class="company-name" data-i18n="experience.company">Celesc - Companhia de Energia do Estado de Santa Catarina</p>
+                    </div>
+                    <span class="experience-date" data-i18n="experience.period">Set/2025 - Fev/2026</span>
+                </div>
+
+                <p class="experience-description" data-i18n="experience.description">
+                    Atua&ccedil;&atilde;o na &aacute;rea de Tecnologia da Informa&ccedil;&atilde;o com suporte funcional,
+                    an&aacute;lise e organiza&ccedil;&atilde;o de dados, dashboards e acompanhamento de sistema
+                    corporativo interno.
+                </p>
+
+                <ul class="experience-list">
+                    <li data-i18n="experience.items.dashboards">Desenvolvimento e manuten&ccedil;&atilde;o de dashboards em Power BI</li>
+                    <li data-i18n="experience.items.data">An&aacute;lise, organiza&ccedil;&atilde;o e valida&ccedil;&atilde;o de dados com Excel</li>
+                    <li data-i18n="experience.items.bugs">Testes, identifica&ccedil;&atilde;o e reporte de bugs</li>
+                    <li data-i18n="experience.items.system">Acompanhamento de sistema corporativo interno</li>
+                    <li data-i18n="experience.items.process">Sugest&otilde;es de melhoria para processos e fluxos operacionais</li>
+                </ul>
+
+                <div class="experience-techs">
+                    <span>Power BI</span>
+                    <span>Excel</span>
+                    <span data-i18n="experience.tags.dataAnalysis">An&aacute;lise de Dados</span>
+                    <span data-i18n="experience.tags.functionalSupport">Suporte Funcional</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="projetos section-shell" id="projetos">
+            <div class="section-title">
+                <span class="section-kicker" data-i18n="projects.eyebrow">Projetos</span>
+                <h2 data-i18n="projects.title">Cases que demonstram constru&ccedil;&atilde;o de sistemas reais</h2>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card project-card--featured">
+                    <span class="project-badge" data-i18n="badges.featured">Destaque</span>
+
+                    <div class="project-carousel" data-carousel tabindex="0" aria-label="Galeria do projeto Sistema de Gest&atilde;o de Estoque"
+                        data-i18n-attr="aria-label" data-i18n-key="a11y.stockGallery">
+                        <div class="carousel-viewport">
+                            <div class="carousel-slides">
+                                <figure class="carousel-slide is-active">
+                                <img src="assets/projects/sistema-gestao-estoque/01-tela-inicial.jpg"
+                                        alt="Sistema de Gest&atilde;o de Estoque - tela inicial" loading="lazy"
+                                        decoding="async" data-i18n-attr="alt" data-i18n-key="alts.stock.initial">
+                                </figure>
+                                <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-gestao-estoque/02-dashboard.jpg"
+                                        alt="Sistema de Gest&atilde;o de Estoque - dashboard" loading="lazy"
+                                        decoding="async" data-i18n-attr="alt" data-i18n-key="alts.stock.dashboard">
+                                </figure>
+                                <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-gestao-estoque/03-categorias.jpg"
+                                        alt="Sistema de Gest&atilde;o de Estoque - categorias" loading="lazy"
+                                        decoding="async" data-i18n-attr="alt" data-i18n-key="alts.stock.categories">
+                                </figure>
+                                <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-gestao-estoque/04-configuracoes.jpg"
+                                        alt="Sistema de Gest&atilde;o de Estoque - configura&ccedil;&otilde;es"
+                                        loading="lazy" decoding="async" data-i18n-attr="alt"
+                                        data-i18n-key="alts.stock.settings">
+                                </figure>
+                                <figure class="carousel-slide">
+                                <img data-src="assets/projects/sistema-gestao-estoque/05-movimentacoes.jpg"
+                                        alt="Sistema de Gest&atilde;o de Estoque - movimenta&ccedil;&otilde;es"
+                                        loading="lazy" decoding="async" data-i18n-attr="alt"
+                                        data-i18n-key="alts.stock.movements">
+                                </figure>
+                            </div>
+
+                            <button class="carousel-arrow carousel-arrow--prev" type="button"
+                                aria-label="Ver imagem anterior do projeto Sistema de Gest&atilde;o de Estoque"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.stockPrev">
+                                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="carousel-arrow carousel-arrow--next" type="button"
+                                aria-label="Ver pr&oacute;xima imagem do projeto Sistema de Gest&atilde;o de Estoque"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.stockNext">
+                                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="carousel-dots" aria-label="Navega&ccedil;&atilde;o do carrossel do Sistema de Gest&atilde;o de Estoque"
+                            data-i18n-attr="aria-label" data-i18n-key="a11y.stockDots">
+                            <button class="carousel-dot is-active" type="button" aria-current="true"
+                                aria-label="Exibir tela inicial do Sistema de Gest&atilde;o de Estoque"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.stockDot1"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir dashboard do Sistema de Gest&atilde;o de Estoque"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.stockDot2"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir categorias do Sistema de Gest&atilde;o de Estoque"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.stockDot3"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir configura&ccedil;&otilde;es do Sistema de Gest&atilde;o de Estoque"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.stockDot4"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir movimenta&ccedil;&otilde;es do Sistema de Gest&atilde;o de Estoque"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.stockDot5"></button>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-title">
+                            <span class="project-icon project-icon--stock" aria-hidden="true">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </span>
+                            <h3 data-i18n="projects.stock.title">Sistema de Gest&atilde;o de Estoque</h3>
+                        </div>
+
+                        <p class="project-description" data-i18n="projects.stock.description">
+                            Sistema full stack para controle de produtos, categorias e movimenta&ccedil;&otilde;es de
+                            estoque, com autentica&ccedil;&atilde;o JWT, dashboard operacional, relat&oacute;rios PDF/Excel,
+                            Docker e deploy em produ&ccedil;&atilde;o com Railway e Vercel.
+                        </p>
+
+                        <p class="project-deploy">
+                            <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
+                            <span data-i18n="projects.stock.deploy">Deploy em produ&ccedil;&atilde;o com Railway e Vercel</span>
+                        </p>
+
+                        <div class="case-study">
+                            <div class="case-study__item">
+                                <strong data-i18n="projects.labels.problem">Problema resolvido</strong>
+                                <p data-i18n="projects.stock.problem">Centraliza o controle de estoque e reduz perda de visibilidade sobre entradas, sa&iacute;das e produtos cr&iacute;ticos.</p>
+                            </div>
+                            <div class="case-study__item">
+                                <strong data-i18n="projects.labels.features">Funcionalidades principais</strong>
+                                <ul>
+                                    <li data-i18n="projects.stock.features.auth">Autentica&ccedil;&atilde;o JWT e permiss&otilde;es</li>
+                                    <li data-i18n="projects.stock.features.dashboard">Dashboard com indicadores</li>
+                                    <li data-i18n="projects.stock.features.reports">Relat&oacute;rios em PDF e Excel</li>
+                                </ul>
+                            </div>
+                            <div class="case-study__item">
+                                <strong data-i18n="projects.labels.challenge">Aprendizados e desafios</strong>
+                                <p data-i18n="projects.stock.challenge">Integra&ccedil;&atilde;o front-end/back-end, seguran&ccedil;a, regras de movimenta&ccedil;&atilde;o e deploy full stack.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-techs">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>React</span>
+                            <span>PostgreSQL</span>
+                            <span>JWT</span>
+                            <span>Docker</span>
+                            <span>Material UI</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="https://github.com/matheus-samuel-dev/sistema-gestao-estoque" target="_blank"
+                                rel="noopener noreferrer" class="btn-github" data-i18n-attr="aria-label"
+                                data-i18n-key="a11y.stockGithub">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                <span data-i18n="buttons.github">GitHub</span>
+                            </a>
+                            <a href="https://sistema-gestao-estoque-two.vercel.app" target="_blank"
+                                rel="noopener noreferrer" class="btn-demo" data-i18n-attr="aria-label"
+                                data-i18n-key="a11y.stockDemo">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                <span data-i18n="buttons.demo">Demonstra&ccedil;&atilde;o</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-carousel" data-carousel tabindex="0" aria-label="Galeria do projeto Sistema Banc&aacute;rio Web"
+                        data-i18n-attr="aria-label" data-i18n-key="a11y.bankGallery">
+                        <div class="carousel-viewport">
+                            <div class="carousel-slides">
+                                <figure class="carousel-slide is-active">
+                                    <img src="assets/projects/sistema-bancario-web/01-tela-inicial.jpg"
+                                        alt="Sistema Banc&aacute;rio Web - tela inicial" loading="lazy"
+                                        decoding="async" data-i18n-attr="alt" data-i18n-key="alts.bank.initial">
+                                </figure>
+                                <figure class="carousel-slide">
+                                    <img data-src="assets/projects/sistema-bancario-web/02-dashboard.jpg"
+                                        alt="Sistema Banc&aacute;rio Web - dashboard" loading="lazy"
+                                        decoding="async" data-i18n-attr="alt" data-i18n-key="alts.bank.dashboard">
+                                </figure>
+                                <figure class="carousel-slide">
+                                    <img data-src="assets/projects/sistema-bancario-web/03-minha-conta.jpg"
+                                        alt="Sistema Banc&aacute;rio Web - minha conta" loading="lazy"
+                                        decoding="async" data-i18n-attr="alt" data-i18n-key="alts.bank.account">
+                                </figure>
+                                <figure class="carousel-slide">
+                                    <img data-src="assets/projects/sistema-bancario-web/04-transferencia.jpg"
+                                        alt="Sistema Banc&aacute;rio Web - transfer&ecirc;ncia" loading="lazy"
+                                        decoding="async" data-i18n-attr="alt" data-i18n-key="alts.bank.transfer">
+                                </figure>
+                                <figure class="carousel-slide">
+                                    <img data-src="assets/projects/sistema-bancario-web/05-extrato.jpg"
+                                        alt="Sistema Banc&aacute;rio Web - extrato completo" loading="lazy"
+                                        decoding="async" data-i18n-attr="alt" data-i18n-key="alts.bank.statement">
+                                </figure>
+                                <figure class="carousel-slide">
+                                    <img data-src="assets/projects/sistema-bancario-web/06-painel-administrativo.jpg"
+                                        alt="Sistema Banc&aacute;rio Web - painel administrativo" loading="lazy"
+                                        decoding="async" data-i18n-attr="alt" data-i18n-key="alts.bank.admin">
+                                </figure>
+                            </div>
+
+                            <button class="carousel-arrow carousel-arrow--prev" type="button"
+                                aria-label="Ver imagem anterior do projeto Sistema Banc&aacute;rio Web"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.bankPrev">
+                                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="carousel-arrow carousel-arrow--next" type="button"
+                                aria-label="Ver pr&oacute;xima imagem do projeto Sistema Banc&aacute;rio Web"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.bankNext">
+                                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="carousel-dots" aria-label="Navega&ccedil;&atilde;o do carrossel do Sistema Banc&aacute;rio Web"
+                            data-i18n-attr="aria-label" data-i18n-key="a11y.bankDots">
+                            <button class="carousel-dot is-active" type="button" aria-current="true"
+                                aria-label="Exibir tela inicial do Sistema Banc&aacute;rio Web" data-i18n-attr="aria-label"
+                                data-i18n-key="a11y.bankDot1"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir dashboard do Sistema Banc&aacute;rio Web"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.bankDot2"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir tela minha conta do Sistema Banc&aacute;rio Web"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.bankDot3"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir tela de transfer&ecirc;ncia do Sistema Banc&aacute;rio Web"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.bankDot4"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir tela de extrato do Sistema Banc&aacute;rio Web"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.bankDot5"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir painel administrativo do Sistema Banc&aacute;rio Web"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.bankDot6"></button>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-title">
+                            <span class="project-icon project-icon--bank" aria-hidden="true">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </span>
+                            <h3 data-i18n="projects.bank.title">Sistema Banc&aacute;rio Web</h3>
+                        </div>
+
+                        <p class="project-description" data-i18n="projects.bank.description">
+                            Aplica&ccedil;&atilde;o web que simula uma experi&ecirc;ncia de internet banking, com
+                            opera&ccedil;&otilde;es de conta, transfer&ecirc;ncias, extrato, painel administrativo,
+                            exporta&ccedil;&atilde;o em PDF e ambiente containerizado com Docker.
+                        </p>
+
+                        <p class="project-deploy">
+                            <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
+                            <span data-i18n="projects.bank.deploy">Deploy em produ&ccedil;&atilde;o na Vercel</span>
+                        </p>
+
+                        <div class="case-study">
+                            <div class="case-study__item">
+                                <strong data-i18n="projects.labels.problem">Problema resolvido</strong>
+                                <p data-i18n="projects.bank.problem">Simula fluxos financeiros com experi&ecirc;ncia pr&oacute;xima de um internet banking real.</p>
+                            </div>
+                            <div class="case-study__item">
+                                <strong data-i18n="projects.labels.features">Funcionalidades principais</strong>
+                                <ul>
+                                    <li data-i18n="projects.bank.features.transactions">Dep&oacute;sitos, saques e transfer&ecirc;ncias</li>
+                                    <li data-i18n="projects.bank.features.admin">Painel administrativo</li>
+                                    <li data-i18n="projects.bank.features.pdf">Extrato e exporta&ccedil;&atilde;o em PDF</li>
+                                </ul>
+                            </div>
+                            <div class="case-study__item">
+                                <strong data-i18n="projects.labels.challenge">Aprendizados e desafios</strong>
+                                <p data-i18n="projects.bank.challenge">Modelagem de fluxos de estado, valida&ccedil;&otilde;es de opera&ccedil;&otilde;es e organiza&ccedil;&atilde;o da interface.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-techs">
+                            <span>React</span>
+                            <span>Vite</span>
+                            <span>JavaScript</span>
+                            <span>CSS</span>
+                            <span>LocalStorage</span>
+                            <span>Docker</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="https://github.com/matheus-samuel-dev/sistema-bancario-python" target="_blank"
+                                rel="noopener noreferrer" class="btn-github" data-i18n-attr="aria-label"
+                                data-i18n-key="a11y.bankGithub">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                <span data-i18n="buttons.github">GitHub</span>
+                            </a>
+                            <a href="https://sistema-bancario-python.vercel.app" target="_blank"
+                                rel="noopener noreferrer" class="btn-demo" data-i18n-attr="aria-label"
+                                data-i18n-key="a11y.bankDemo">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                <span data-i18n="buttons.demo">Demonstra&ccedil;&atilde;o</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-carousel" data-carousel tabindex="0" aria-label="Galeria do projeto Convite RSVP"
+                        data-i18n-attr="aria-label" data-i18n-key="a11y.rsvpGallery">
+                        <div class="carousel-viewport">
+                            <div class="carousel-slides">
+                                <figure class="carousel-slide is-active">
+                                    <img src="assets/projects/convite-rsvp/01-tela-inicial.jpg"
+                                        alt="Convite RSVP - tela inicial" loading="lazy" decoding="async"
+                                        data-i18n-attr="alt" data-i18n-key="alts.rsvp.initial">
+                                </figure>
+                                <figure class="carousel-slide">
+                                    <img data-src="assets/projects/convite-rsvp/02-contagem-regressiva.jpg"
+                                        alt="Convite RSVP - contagem regressiva" loading="lazy" decoding="async"
+                                        data-i18n-attr="alt" data-i18n-key="alts.rsvp.countdown">
+                                </figure>
+                                <figure class="carousel-slide">
+                                    <img data-src="assets/projects/convite-rsvp/03-confirmacao-rsvp.jpg"
+                                        alt="Convite RSVP - confirma&ccedil;&atilde;o RSVP" loading="lazy"
+                                        decoding="async" data-i18n-attr="alt" data-i18n-key="alts.rsvp.confirmation">
+                                </figure>
+                            </div>
+
+                            <button class="carousel-arrow carousel-arrow--prev" type="button"
+                                aria-label="Ver imagem anterior do projeto Convite RSVP" data-i18n-attr="aria-label"
+                                data-i18n-key="a11y.rsvpPrev">
+                                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="carousel-arrow carousel-arrow--next" type="button"
+                                aria-label="Ver pr&oacute;xima imagem do projeto Convite RSVP" data-i18n-attr="aria-label"
+                                data-i18n-key="a11y.rsvpNext">
+                                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="carousel-dots" aria-label="Navega&ccedil;&atilde;o do carrossel do Convite RSVP"
+                            data-i18n-attr="aria-label" data-i18n-key="a11y.rsvpDots">
+                            <button class="carousel-dot is-active" type="button" aria-current="true"
+                                aria-label="Exibir tela inicial do Convite RSVP" data-i18n-attr="aria-label"
+                                data-i18n-key="a11y.rsvpDot1"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir tela de contagem regressiva do Convite RSVP"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.rsvpDot2"></button>
+                            <button class="carousel-dot" type="button" aria-label="Exibir tela de confirma&ccedil;&atilde;o do Convite RSVP"
+                                data-i18n-attr="aria-label" data-i18n-key="a11y.rsvpDot3"></button>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-title">
+                            <span class="project-icon project-icon--event" aria-hidden="true">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </span>
+                            <h3 data-i18n="projects.rsvp.title">Convite RSVP</h3>
+                        </div>
+
+                        <p class="project-description" data-i18n="projects.rsvp.description">
+                            Aplica&ccedil;&atilde;o responsiva para confirma&ccedil;&atilde;o de presen&ccedil;a, controle
+                            de convidados e administra&ccedil;&atilde;o de eventos, com dados em nuvem via Firebase.
+                        </p>
+
+                        <div class="case-study">
+                            <div class="case-study__item">
+                                <strong data-i18n="projects.labels.problem">Problema resolvido</strong>
+                                <p data-i18n="projects.rsvp.problem">Substitui confirma&ccedil;&otilde;es manuais por um fluxo digital simples para convidados e organizadores.</p>
+                            </div>
+                            <div class="case-study__item">
+                                <strong data-i18n="projects.labels.features">Funcionalidades principais</strong>
+                                <ul>
+                                    <li data-i18n="projects.rsvp.features.form">Formul&aacute;rio RSVP</li>
+                                    <li data-i18n="projects.rsvp.features.admin">Painel de confirma&ccedil;&otilde;es</li>
+                                    <li data-i18n="projects.rsvp.features.cloud">Dados em nuvem com Firebase</li>
+                                </ul>
+                            </div>
+                            <div class="case-study__item">
+                                <strong data-i18n="projects.labels.challenge">Aprendizados e desafios</strong>
+                                <p data-i18n="projects.rsvp.challenge">Responsividade, integra&ccedil;&atilde;o com Firebase e experi&ecirc;ncia simples para diferentes usu&aacute;rios.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-techs">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Firebase</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="https://github.com/matheus-samuel-dev/convite-aniversario" target="_blank"
+                                rel="noopener noreferrer" class="btn-github" data-i18n-attr="aria-label"
+                                data-i18n-key="a11y.rsvpGithub">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                <span data-i18n="buttons.github">GitHub</span>
+                            </a>
+                            <a href="https://convite-aniversario-9398f.web.app" target="_blank"
+                                rel="noopener noreferrer" class="btn-demo" data-i18n-attr="aria-label"
+                                data-i18n-key="a11y.rsvpDemo">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                <span data-i18n="buttons.demo">Demonstra&ccedil;&atilde;o</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="project-roadmap" aria-label="Projetos em finaliza&ccedil;&atilde;o para novos estudos de caso"
+                data-i18n-attr="aria-label" data-i18n-key="a11y.projectRoadmap">
+                <h3 data-i18n="projects.nextTitle">Projetos em finaliza&ccedil;&atilde;o para novos estudos de caso</h3>
+                <div class="roadmap-grid">
+                    <article class="roadmap-card">
+                        <span data-i18n="badges.next">Em finaliza&ccedil;&atilde;o</span>
+                        <h4 data-i18n="projects.helpdesk.title">Sistema HelpDesk</h4>
+                        <p data-i18n="projects.helpdesk.text">Sistema para abertura, acompanhamento e gest&atilde;o de chamados, com autentica&ccedil;&atilde;o, dashboard, SLA e fluxo operacional.</p>
+                    </article>
+                    <article class="roadmap-card">
+                        <span data-i18n="badges.next">Em finaliza&ccedil;&atilde;o</span>
+                        <h4 data-i18n="projects.auditor.title">AI Web Auditor</h4>
+                        <p data-i18n="projects.auditor.text">Ferramenta para auditoria de p&aacute;ginas web com an&aacute;lise t&eacute;cnica, relat&oacute;rios e apoio de IA generativa.</p>
+                    </article>
+                    <article class="roadmap-card">
+                        <span data-i18n="badges.next">Em finaliza&ccedil;&atilde;o</span>
+                        <h4 data-i18n="projects.pool.title">Sistema de Bol&atilde;o da Copa</h4>
+                        <p data-i18n="projects.pool.text">Aplica&ccedil;&atilde;o para rankings, palpites, autentica&ccedil;&atilde;o e gest&atilde;o de participantes.</p>
+                    </article>
+                    <article class="roadmap-card">
+                        <span data-i18n="badges.next">Em finaliza&ccedil;&atilde;o</span>
+                        <h4 data-i18n="projects.finance.title">Sistema de Gest&atilde;o Financeira</h4>
+                        <p data-i18n="projects.finance.text">Sistema para controle de receitas, despesas, categorias, metas, transa&ccedil;&otilde;es recorrentes, dashboards financeiros e relat&oacute;rios.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="certificacoes section-shell" id="certificacoes">
+            <div class="section-title">
+                <span class="section-kicker" data-i18n="certificates.eyebrow">Certifica&ccedil;&otilde;es</span>
+                <h2 data-i18n="certificates.title">Forma&ccedil;&otilde;es que sustentam minha evolu&ccedil;&atilde;o t&eacute;cnica</h2>
+            </div>
+
+            <div class="cert-grid">
+                <article class="cert-card">
+                    <span class="cert-card__icon" aria-hidden="true">
+                        <i class="fa-brands fa-java"></i>
+                    </span>
+                    <div>
+                        <span class="cert-card__tag" data-i18n="certificates.java.category">Back-end</span>
+                        <h3>Java + Spring Boot</h3>
+                        <p>Cubos Academy &bull; 18h</p>
+                        <small data-i18n="certificates.java.focus">Foco: APIs, back-end e fundamentos Java</small>
+                    </div>
+                </article>
+                <article class="cert-card">
+                    <span class="cert-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </span>
+                    <div>
+                        <span class="cert-card__tag" data-i18n="certificates.fullstack.category">Full Stack</span>
+                        <h3>Full Stack Java + Angular</h3>
+                        <p>Santander Bootcamp &bull; 115h</p>
+                        <small data-i18n="certificates.fullstack.focus">Foco: desenvolvimento full stack e aplica&ccedil;&otilde;es web</small>
+                    </div>
+                </article>
+                <article class="cert-card">
+                    <span class="cert-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-table"></i>
+                    </span>
+                    <div>
+                        <span class="cert-card__tag" data-i18n="certificates.excel.category">Dados</span>
+                        <h3 data-i18n="certificates.excel.title">Excel B&aacute;sico</h3>
+                        <p>Senac &bull; 30h</p>
+                        <small data-i18n="certificates.excel.focus">Foco: dados, planilhas e organiza&ccedil;&atilde;o de informa&ccedil;&otilde;es</small>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato" class="contact section-shell">
+            <div class="contact-panel">
+                <div class="contact-copy">
+                    <span class="section-kicker" data-i18n="contact.eyebrow">Contato</span>
+                    <h2 data-i18n="contact.title">Vamos construir algo juntos?</h2>
+                    <p data-i18n="contact.description">
+                        Estou aberto a oportunidades como Desenvolvedor Java Back-end, Full Stack J&uacute;nior,
+                        est&aacute;gio em tecnologia e projetos freelancer.
+                    </p>
+
+                    <div class="contact-actions">
+                        <a href="mailto:matheussamuel05@gmail.com" class="btn btn-primary" data-i18n="contact.email"
+                            data-i18n-attr="aria-label" data-i18n-key="a11y.emailAction">Enviar e-mail</a>
+                        <a href="https://www.linkedin.com/in/matheus-samuel-dev" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-secondary" data-i18n="contact.linkedin"
+                            data-i18n-attr="aria-label" data-i18n-key="a11y.linkedinProfile">LinkedIn</a>
+                        <a href="https://github.com/matheus-samuel-dev" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary" data-i18n="contact.github" data-i18n-attr="aria-label"
+                            data-i18n-key="a11y.githubProfile">GitHub</a>
+                    </div>
+                    <p class="contact-note" data-i18n="contact.note">
+                        Formul&aacute;rio conectado para contato direto. Se preferir, use o bot&atilde;o de e-mail.
+                    </p>
+                </div>
+
+                <!-- Static GitHub Pages form: Web3Forms forwards messages to e-mail. -->
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST"
+                    data-form-provider="web3forms" aria-label="Formul&aacute;rio de contato"
+                    data-i18n-attr="aria-label" data-i18n-key="a11y.contactForm">
+                    <div class="contact-form__header">
+                        <strong data-i18n="contact.formTitle">Envie uma mensagem</strong>
+                        <span data-i18n="contact.formSubtitle">Retorno o contato assim que poss&iacute;vel.</span>
+                    </div>
+                    <input type="hidden" name="access_key" value="f4fa1f68-71eb-401d-8345-98f2178c67a4">
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    <input type="hidden" name="subject" value="Nova mensagem do Portfolio" data-i18n-attr="value"
+                        data-i18n-key="contact.formSubject">
+                    <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+
+                    <label>
+                        <span data-i18n="contact.formNameLabel">Nome</span>
+                        <input type="text" name="name" placeholder="Seu nome" autocomplete="name" required
+                            data-i18n-attr="placeholder" data-i18n-key="contact.formNamePlaceholder">
+                    </label>
+                    <label>
+                        <span data-i18n="contact.formEmailLabel">E-mail</span>
+                        <input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required
+                            data-i18n-attr="placeholder" data-i18n-key="contact.formEmailPlaceholder">
+                    </label>
+                    <label>
+                        <span data-i18n="contact.formMessageLabel">Mensagem</span>
+                        <textarea name="message" placeholder="Sua mensagem" rows="5" required
+                            data-i18n-attr="placeholder" data-i18n-key="contact.formMessagePlaceholder"></textarea>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.formSubmit">Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <div class="resume-modal" id="resumeModal" hidden>
         <div class="resume-modal__backdrop" data-close-resume-modal></div>
         <div class="resume-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
             <div class="resume-modal__header">
                 <div>
-                    <p class="resume-modal__eyebrow">Curr&iacute;culo</p>
-                    <h3 id="resumeModalTitle">Visualiza&ccedil;&atilde;o do Curr&iacute;culo</h3>
+                    <p class="resume-modal__eyebrow" data-i18n="resume.eyebrow">Curr&iacute;culo</p>
+                    <h3 id="resumeModalTitle" data-i18n="resume.title">Visualiza&ccedil;&atilde;o do Curr&iacute;culo</h3>
                 </div>
 
                 <button type="button" class="resume-modal__close" id="closeResumeModal"
-                    aria-label="Fechar visualiza&ccedil;&atilde;o do curr&iacute;culo">
+                    aria-label="Fechar visualiza&ccedil;&atilde;o do curr&iacute;culo" data-i18n-attr="aria-label"
+                    data-i18n-key="a11y.closeResumeModal">
                     <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                 </button>
             </div>
 
             <div class="resume-modal__content">
-                <iframe src="assets/Curriculo_Matheus_Samuel_Baena.pdf#view=FitH"
-                    title="Curr&iacute;culo de Matheus Samuel em PDF" loading="lazy"></iframe>
+                <iframe src="assets/cv/curriculo-matheus-samuel.pdf#view=FitH"
+                    title="Curr&iacute;culo de Matheus Samuel em PDF" loading="lazy" data-cv-frame
+                    data-i18n-attr="title" data-i18n-key="a11y.resumeFrame"></iframe>
             </div>
 
             <div class="resume-modal__footer">
-                <p>Role para navegar entre as p&aacute;ginas do PDF.</p>
-                <a href="assets/Curriculo_Matheus_Samuel_Baena.pdf" download class="btn-primary">
-                    <i class="fa-solid fa-download" aria-hidden="true"></i>
-                    Download Curr&iacute;culo
+                <p data-i18n="resume.hint">Role para navegar entre as p&aacute;ginas do PDF.</p>
+                <a href="assets/cv/curriculo-matheus-samuel.pdf" download class="btn btn-primary" data-cv-link
+                    data-i18n="buttons.downloadCv" data-i18n-attr="aria-label" data-i18n-key="a11y.downloadCv">
+                    Baixar Curr&iacute;culo
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- SOBRE -->
-
-    <section class="sobre" id="sobre">
-
-        <div class="section-title">
-            <h2>Sobre mim</h2>
-        </div>
-
-        <div class="sobre-content">
-
-            <div class="sobre-text">
-
-                <p>
-                    Sou Desenvolvedor Java Full Stack apaixonado por criar aplica&ccedil;&otilde;es modernas,
-                    escal&aacute;veis e bem estruturadas.
-                </p>
-
-                <p>
-                    Tenho experi&ecirc;ncia pr&aacute;tica no desenvolvimento de sistemas completos utilizando Java,
-                    Spring Boot, React e PostgreSQL, construindo APIs REST, interfaces responsivas e solu&ccedil;&otilde;es
-                    focadas em boas pr&aacute;ticas de arquitetura e experi&ecirc;ncia do usu&aacute;rio.
-                </p>
-
-                <p>
-                    Busco minha primeira oportunidade como Desenvolvedor Back-end Java ou Full Stack, onde eu possa
-                    contribuir com projetos desafiadores, evoluir tecnicamente e gerar impacto atrav&eacute;s de software
-                    de qualidade.
-                </p>
-
-                <p>
-                    Acredito que aprendizado cont&iacute;nuo, dedica&ccedil;&atilde;o e aten&ccedil;&atilde;o aos detalhes
-                    s&atilde;o diferenciais fundamentais para construir produtos confi&aacute;veis e experi&ecirc;ncias
-                    que realmente agreguem valor.
-                </p>
-
-                <div class="sobre-badges" aria-label="Principais compet&ecirc;ncias e valores profissionais">
-                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> APIs REST</span>
-                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Clean Code</span>
-                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Arquitetura em Camadas</span>
-                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Desenvolvimento Full Stack</span>
-                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Versionamento Git</span>
-                    <span class="sobre-badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Aprendizado Cont&iacute;nuo</span>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="about-expectations">
-            <div class="about-expectations__header">
-                <h3>O que voc&ecirc; pode esperar de mim</h3>
-                <p>
-                    Diferenciais que orientam minha forma de aprender, desenvolver software e colaborar em equipe.
-                </p>
-            </div>
-
-            <div class="about-expectations__grid">
-                <article class="expectation-card">
-                    <span class="expectation-card__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4.5 19.5c1.4-3.5 4-6.1 7.5-7.5" />
-                            <path d="M14 6l4-1 1 4-4 1" />
-                            <path d="M15 10l-5 5" />
-                            <path d="M5 14l5 5" />
-                            <path d="M12 7l5 5" />
-                        </svg>
-                    </span>
-                    <h4>Aprendizado r&aacute;pido</h4>
-                    <p>
-                        Aprendo novas tecnologias e regras de neg&oacute;cio com rapidez, adaptando-me facilmente a
-                        diferentes projetos e desafios.
-                    </p>
-                </article>
-
-                <article class="expectation-card">
-                    <span class="expectation-card__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="16 18 22 12 16 6" />
-                            <polyline points="8 6 2 12 8 18" />
-                            <line x1="14" y1="4" x2="10" y2="20" />
-                        </svg>
-                    </span>
-                    <h4>C&oacute;digo de qualidade</h4>
-                    <p>
-                        Desenvolvo aplica&ccedil;&otilde;es priorizando organiza&ccedil;&atilde;o, boas pr&aacute;ticas,
-                        Clean Code, arquitetura em camadas e facilidade de manuten&ccedil;&atilde;o.
-                    </p>
-                </article>
-
-                <article class="expectation-card">
-                    <span class="expectation-card__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                        </svg>
-                    </span>
-                    <h4>Colabora&ccedil;&atilde;o</h4>
-                    <p>
-                        Valorizo comunica&ccedil;&atilde;o clara, trabalho em equipe, responsabilidade e melhoria
-                        cont&iacute;nua para entregar solu&ccedil;&otilde;es de qualidade.
-                    </p>
-                </article>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- TECNOLOGIAS -->
-
-    <section class="tecnologias" id="tecnologias">
-        <div class="section-title">
-            <h2>Tecnologias</h2>
-        </div>
-
-        <div class="tech-grid">
-
-            <div class="tech-card tech-card--core tech-card--java">
-                <i class="fa-brands fa-java"></i>
-                <p>Java</p>
-            </div>
-
-            <div class="tech-card tech-card--core tech-card--spring">
-                <i class="fa-solid fa-leaf"></i>
-                <p>Spring Boot</p>
-            </div>
-
-            <div class="tech-card tech-card--core tech-card--react">
-                <i class="fa-brands fa-react"></i>
-                <p>React</p>
-            </div>
-
-            <div class="tech-card tech-card--core tech-card--postgres">
-                <i class="fa-solid fa-database"></i>
-                <p>PostgreSQL</p>
-            </div>
-
-            <div class="tech-card tech-card--core tech-card--docker">
-                <i class="fa-brands fa-docker"></i>
-                <p>Docker</p>
-            </div>
-
-            <div class="tech-card tech-card--javascript">
-                <i class="fa-brands fa-js"></i>
-                <p>JavaScript</p>
-            </div>
-
-            <div class="tech-card tech-card--git">
-                <i class="fa-brands fa-git-alt"></i>
-                <p>Git</p>
-            </div>
-
-            <div class="tech-card tech-card--github">
-                <i class="fa-brands fa-github"></i>
-                <p>GitHub</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="experiencia" id="experiencia">
-
-        <div class="section-title">
-            <h2>Experi&ecirc;ncia Profissional</h2>
-        </div>
-
-        <div class="experience-card">
-
-            <h3>
-                <i class="fa-solid fa-briefcase"></i>
-                Estagi&aacute;rio de TI
-            </h3>
-
-            <h4>Celesc</h4>
-
-            <p class="company-name">
-                Companhia de Energia do Estado de Santa Catarina
-            </p>
-
-            <p class="experience-date">
-                Set/2025 - Fev/2026
-            </p>
-
-            <p class="experience-description">
-                Atua&ccedil;&atilde;o na &aacute;rea de Tecnologia da Informa&ccedil;&atilde;o com foco em suporte funcional,
-                an&aacute;lise de dados, desenvolvimento de dashboards e melhoria cont&iacute;nua de
-                processos internos.
-            </p>
-
-            <ul>
-                <li>Desenvolvimento e manuten&ccedil;&atilde;o de dashboards utilizando Power BI</li>
-                <li>Manipula&ccedil;&atilde;o, an&aacute;lise e organiza&ccedil;&atilde;o de dados com Excel</li>
-                <li>Suporte funcional e acompanhamento de aplicativo interno corporativo</li>
-                <li>Identifica&ccedil;&atilde;o, an&aacute;lise e reporte de bugs, al&eacute;m da sugest&atilde;o de melhorias funcionais</li>
-                <li>Apoio na otimiza&ccedil;&atilde;o de processos internos por meio de solu&ccedil;&otilde;es orientadas a dados</li>
-            </ul>
-
-            <div class="experience-techs">
-                <span>Power BI</span>
-                <span>Excel</span>
-                <span>An&aacute;lise de Dados</span>
-                <span>Suporte Funcional</span>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- PROJETOS -->
-
-    <section class="projetos" id="projetos">
-
-        <div class="section-title">
-            <h2>Projetos</h2>
-        </div>
-
-        <div class="projects-grid">
-
-            <article class="project-card">
-
-                <div class="project-carousel" data-carousel aria-label="Galeria do projeto Sistema Banc&aacute;rio Web"
-                    tabindex="0">
-                    <div class="carousel-viewport">
-                        <div class="carousel-slides">
-                            <figure class="carousel-slide is-active">
-                                <img src="assets/projects/sistema-bancario-web/01-tela-inicial.png"
-                                    alt="Sistema Banc&aacute;rio Web - tela inicial" loading="lazy"
-                                    decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/sistema-bancario-web/02-dashboard.png"
-                                    alt="Sistema Banc&aacute;rio Web - dashboard" loading="lazy"
-                                    decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/sistema-bancario-web/03-minha-conta.png"
-                                    alt="Sistema Banc&aacute;rio Web - minha conta" loading="lazy"
-                                    decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/sistema-bancario-web/04-transferencia.png"
-                                    alt="Sistema Banc&aacute;rio Web - transfer&ecirc;ncia" loading="lazy"
-                                    decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/sistema-bancario-web/05-extrato.png"
-                                    alt="Sistema Banc&aacute;rio Web - extrato completo" loading="lazy"
-                                    decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/sistema-bancario-web/06-painel-administrativo.png"
-                                    alt="Sistema Banc&aacute;rio Web - painel administrativo" loading="lazy"
-                                    decoding="async">
-                            </figure>
-                        </div>
-
-                        <button class="carousel-arrow carousel-arrow--prev" type="button"
-                            aria-label="Ver imagem anterior do projeto Sistema Banc&aacute;rio Web">
-                            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                        </button>
-
-                        <button class="carousel-arrow carousel-arrow--next" type="button"
-                            aria-label="Ver pr&oacute;xima imagem do projeto Sistema Banc&aacute;rio Web">
-                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
-
-                    <div class="carousel-dots" aria-label="Navega&ccedil;&atilde;o do carrossel do Sistema Banc&aacute;rio Web">
-                        <button class="carousel-dot is-active" type="button"
-                            aria-label="Exibir tela inicial do Sistema Banc&aacute;rio Web" aria-current="true"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir dashboard do Sistema Banc&aacute;rio Web"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir tela minha conta do Sistema Banc&aacute;rio Web"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir tela de transfer&ecirc;ncia do Sistema Banc&aacute;rio Web"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir tela de extrato do Sistema Banc&aacute;rio Web"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir painel administrativo do Sistema Banc&aacute;rio Web"></button>
-                    </div>
-                </div>
-
-                <div class="project-info">
-
-                    <div class="project-title">
-                        <span class="project-icon project-icon--bank" aria-hidden="true">
-                            <i class="fa-solid fa-building-columns"></i>
-                        </span>
-                        <h3>Sistema Banc&aacute;rio Web</h3>
-                    </div>
-
-                    <p class="project-description">
-                        Sistema banc&aacute;rio web inspirado em internet banking reais. Possui autentica&ccedil;&atilde;o,
-                        &aacute;rea do usu&aacute;rio, painel administrativo, dep&oacute;sitos, saques, transfer&ecirc;ncias,
-                        extrato completo, exporta&ccedil;&atilde;o de PDF e gerenciamento de contas.
-                    </p>
-
-                    <div class="project-techs">
-                        <span>React</span>
-                        <span>Vite</span>
-                        <span>JavaScript</span>
-                        <span>CSS</span>
-                        <span>LocalStorage</span>
-                    </div>
-
-                    <div class="project-buttons">
-                        <a href="https://github.com/matheus-samuel-dev/sistema-bancario-python" target="_blank"
-                            rel="noopener noreferrer" class="btn-github"
-                            aria-label="Abrir GitHub do projeto Sistema Banc&aacute;rio Web em nova aba">
-                            <i class="fa-brands fa-github" aria-hidden="true"></i>
-                            GitHub
-                        </a>
-
-                        <a href="https://sistema-bancario-python.vercel.app" target="_blank"
-                            rel="noopener noreferrer" class="btn-demo"
-                            aria-label="Abrir demonstra&ccedil;&atilde;o do projeto Sistema Banc&aacute;rio Web em nova aba">
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            Demonstra&ccedil;&atilde;o
-                        </a>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <article class="project-card">
-
-                <div class="project-carousel" data-carousel aria-label="Galeria do projeto Convite RSVP"
-                    tabindex="0">
-                    <div class="carousel-viewport">
-                        <div class="carousel-slides">
-                            <figure class="carousel-slide is-active">
-                                <img src="assets/projects/convite-rsvp/01-tela-inicial.png"
-                                    alt="Convite RSVP - tela inicial" loading="lazy"
-                                    decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/convite-rsvp/02-contagem-regressiva.png"
-                                    alt="Convite RSVP - contagem regressiva" loading="lazy" decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/convite-rsvp/03-confirmacao-rsvp.png"
-                                    alt="Convite RSVP - confirma&ccedil;&atilde;o RSVP" loading="lazy"
-                                    decoding="async">
-                            </figure>
-                        </div>
-
-                        <button class="carousel-arrow carousel-arrow--prev" type="button"
-                            aria-label="Ver imagem anterior do projeto Convite RSVP">
-                            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                        </button>
-
-                        <button class="carousel-arrow carousel-arrow--next" type="button"
-                            aria-label="Ver pr&oacute;xima imagem do projeto Convite RSVP">
-                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
-
-                    <div class="carousel-dots" aria-label="Navega&ccedil;&atilde;o do carrossel do Convite RSVP">
-                        <button class="carousel-dot is-active" type="button" aria-label="Exibir tela inicial do Convite RSVP"
-                            aria-current="true"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir tela de contagem regressiva do Convite RSVP"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir tela de confirma&ccedil;&atilde;o do Convite RSVP"></button>
-                    </div>
-                </div>
-
-                <div class="project-info">
-
-                    <div class="project-title">
-                        <span class="project-icon project-icon--event" aria-hidden="true">
-                            <i class="fa-solid fa-calendar-days"></i>
-                        </span>
-                        <h3>Convite de Anivers&aacute;rio RSVP</h3>
-                    </div>
-
-                    <p class="project-description">
-                        Sistema web responsivo desenvolvido para gerenciamento de convidados e confirma&ccedil;&atilde;o
-                        de presen&ccedil;a em eventos. Possui formul&aacute;rio RSVP, painel administrativo, controle
-                        de confirma&ccedil;&otilde;es e armazenamento de dados em nuvem.
-                    </p>
-
-                    <div class="project-techs">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Firebase</span>
-                    </div>
-
-                    <div class="project-buttons">
-                        <a href="https://github.com/matheus-samuel-dev/convite-aniversario" target="_blank"
-                            rel="noopener noreferrer" class="btn-github"
-                            aria-label="Abrir GitHub do projeto Convite de Anivers&aacute;rio RSVP em nova aba">
-                            <i class="fa-brands fa-github" aria-hidden="true"></i>
-                            GitHub
-                        </a>
-
-                        <a href="https://convite-aniversario-9398f.web.app" target="_blank"
-                            rel="noopener noreferrer" class="btn-demo"
-                            aria-label="Abrir demonstra&ccedil;&atilde;o do projeto Convite de Anivers&aacute;rio RSVP em nova aba">
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            Demonstra&ccedil;&atilde;o
-                        </a>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <article class="project-card project-card--featured">
-
-                <span class="project-badge">DESTAQUE</span>
-
-                <div class="project-carousel" data-carousel
-                    aria-label="Galeria do projeto Sistema de Gest&atilde;o de Estoque" tabindex="0">
-                    <div class="carousel-viewport">
-                        <div class="carousel-slides">
-                            <figure class="carousel-slide is-active">
-                                <img src="assets/projects/sistema-gestao-estoque/01-tela-inicial.png"
-                                    alt="Sistema de Gest&atilde;o de Estoque - tela inicial" loading="lazy"
-                                    decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/sistema-gestao-estoque/02-dashboard.png"
-                                    alt="Sistema de Gest&atilde;o de Estoque - dashboard"
-                                    loading="lazy" decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/sistema-gestao-estoque/03-categorias.png"
-                                    alt="Sistema de Gest&atilde;o de Estoque - categorias"
-                                    loading="lazy" decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/sistema-gestao-estoque/04-configuracoes.png"
-                                    alt="Sistema de Gest&atilde;o de Estoque - configura&ccedil;&otilde;es"
-                                    loading="lazy" decoding="async">
-                            </figure>
-                            <figure class="carousel-slide">
-                                <img data-src="assets/projects/sistema-gestao-estoque/05-movimentacoes.png"
-                                    alt="Sistema de Gest&atilde;o de Estoque - movimenta&ccedil;&otilde;es"
-                                    loading="lazy" decoding="async">
-                            </figure>
-                        </div>
-
-                        <button class="carousel-arrow carousel-arrow--prev" type="button"
-                            aria-label="Ver imagem anterior do projeto Sistema de Gest&atilde;o de Estoque">
-                            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                        </button>
-
-                        <button class="carousel-arrow carousel-arrow--next" type="button"
-                            aria-label="Ver pr&oacute;xima imagem do projeto Sistema de Gest&atilde;o de Estoque">
-                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
-
-                    <div class="carousel-dots"
-                        aria-label="Navega&ccedil;&atilde;o do carrossel do Sistema de Gest&atilde;o de Estoque">
-                        <button class="carousel-dot is-active" type="button"
-                            aria-label="Exibir tela inicial do Sistema de Gest&atilde;o de Estoque"
-                            aria-current="true"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir dashboard do Sistema de Gest&atilde;o de Estoque"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir categorias do Sistema de Gest&atilde;o de Estoque"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir configura&ccedil;&otilde;es do Sistema de Gest&atilde;o de Estoque"></button>
-                        <button class="carousel-dot" type="button"
-                            aria-label="Exibir movimenta&ccedil;&otilde;es do Sistema de Gest&atilde;o de Estoque"></button>
-                    </div>
-                </div>
-
-                <div class="project-info">
-
-                    <div class="project-title">
-                        <span class="project-icon project-icon--stock" aria-hidden="true">
-                            <i class="fa-solid fa-boxes-stacked"></i>
-                        </span>
-                        <h3>Sistema de Gest&atilde;o de Estoque</h3>
-                    </div>
-
-                    <p class="project-description">
-                        Sistema completo de gest&atilde;o de estoque desenvolvido com Java, Spring Boot, React e
-                        PostgreSQL. Possui autentica&ccedil;&atilde;o JWT, controle de produtos e categorias, registro
-                        de movimenta&ccedil;&otilde;es de entrada e sa&iacute;da, dashboard com indicadores em tempo real,
-                        exporta&ccedil;&atilde;o de relat&oacute;rios em PDF e Excel, controle de permiss&otilde;es por
-                        usu&aacute;rio e interface moderna totalmente responsiva.
-                    </p>
-
-                    <div class="project-techs">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>React</span>
-                        <span>PostgreSQL</span>
-                        <span>JWT</span>
-                        <span>Material UI</span>
-                        <span>Vercel</span>
-                        <span>Railway</span>
-                    </div>
-
-                    <div class="project-buttons">
-                        <a href="https://github.com/matheus-samuel-dev/sistema-gestao-estoque" target="_blank"
-                            rel="noopener noreferrer" class="btn-github"
-                            aria-label="Abrir GitHub do projeto Sistema de Gest&atilde;o de Estoque em nova aba">
-                            <i class="fa-brands fa-github" aria-hidden="true"></i>
-                            GitHub
-                        </a>
-
-                        <a href="https://sistema-gestao-estoque-two.vercel.app" target="_blank"
-                            rel="noopener noreferrer" class="btn-demo"
-                            aria-label="Abrir demonstra&ccedil;&atilde;o do projeto Sistema de Gest&atilde;o de Estoque em nova aba">
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            Demonstra&ccedil;&atilde;o
-                        </a>
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-    <section class="certificacoes" id="certificacoes">
-
-        <div class="section-title">
-            <h2>Certifica&ccedil;&otilde;es</h2>
-        </div>
-
-        <div class="cert-grid">
-
-            <div class="cert-card">
-                <h3>Java + Spring Boot</h3>
-                <p>Cubos Academy • 18h</p>
-            </div>
-
-            <div class="cert-card">
-                <h3>Full Stack Java + Angular</h3>
-                <p>Santander Bootcamp • 115h</p>
-            </div>
-
-            <div class="cert-card">
-                <h3>Excel B&aacute;sico</h3>
-                <p>Senac • 30h</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CONTATO -->
-
-    <section id="contato" class="contact">
-
-        <div class="container">
-
-            <h2>Entre em Contato</h2>
-
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-
-                <input type="hidden" name="access_key" value="f4fa1f68-71eb-401d-8345-98f2178c67a4">
-                <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                <input type="hidden" name="subject" value="Nova mensagem do Portf&oacute;lio">
-                <input type="checkbox" name="botcheck" style="display: none;">
-
-                <input type="text" name="name" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-
-                <button type="submit">
-                    Enviar mensagem
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-
     <footer class="footer">
+        <p data-i18n="footer.copyright">&copy; 2026 - Matheus Samuel. Todos os direitos reservados.</p>
 
-        <p>&copy; 2026 - Matheus Samuel</p>
-
-        <div class="footer-links">
-
-            <a href="https://github.com/matheus-samuel-dev" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-github"></i>
+        <div class="footer-links" aria-label="Links sociais" data-i18n-attr="aria-label" data-i18n-key="a11y.footerLinks">
+            <a href="https://github.com/matheus-samuel-dev" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub de Matheus Samuel" data-i18n-attr="aria-label" data-i18n-key="a11y.githubProfile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
             </a>
-
-            <a href="https://www.linkedin.com/in/matheus-samuel-dev" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/matheus-samuel-dev" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn de Matheus Samuel" data-i18n-attr="aria-label" data-i18n-key="a11y.linkedinProfile">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
             </a>
-
-            <a href="mailto:matheussamuel05@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:matheussamuel05@gmail.com" aria-label="Enviar e-mail para Matheus Samuel"
+                data-i18n-attr="aria-label" data-i18n-key="a11y.emailAction">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
             </a>
-
         </div>
-
     </footer>
 
-    <!-- BOTAO TOPO -->
-
-    <button id="backToTop" aria-label="Voltar ao topo">
-        &uarr;
+    <button id="backToTop" type="button" aria-label="Voltar ao topo" data-i18n-attr="aria-label"
+        data-i18n-key="a11y.backToTop">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- JAVASCRIPT -->
-
     <script src="js/script.js"></script>
-
 </body>
 
 </html>

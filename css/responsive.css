@@ -1,122 +1,303 @@
-@media (max-width: 992px) {
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 150px;
-        gap: 42px;
+@media (max-width: 1180px) {
+    .header,
+    .section-shell,
+    .hero,
+    .footer {
+        padding-left: 6%;
+        padding-right: 6%;
     }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero-proof {
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 0;
-        border-left: none;
-    }
-
-    .hero-stack {
-        justify-content: center;
-    }
-
-    .social-links {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-image {
-        justify-content: center;
-    }
-
-    .about-expectations__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-@media (max-width: 768px) {
 
     .navbar {
+        gap: 2px;
+    }
+
+    .navbar a {
+        padding: 8px;
+        font-size: 0.86rem;
+    }
+
+    .hero h1 {
+        font-size: 3.9rem;
+    }
+
+    .hero__content {
+        gap: 44px;
+    }
+
+    .roadmap-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1080px) {
+    :root {
+        --header-height: 76px;
+    }
+
+    .navbar {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 6%;
+        width: min(320px, 88vw);
         display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        padding: 10px;
+        box-shadow: var(--shadow);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 12px;
     }
 
     .menu-mobile {
-        display: block;
+        display: inline-flex;
     }
 
-    .hero-text h1 {
-        font-size: 48px;
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + 52px);
     }
 
-    .hero-text h2 {
-        font-size: 24px;
+    .hero__content,
+    .about-layout,
+    .contact-panel {
+        grid-template-columns: 1fr;
     }
 
-    .hero-proof__headline {
-        font-size: 15px;
+    .hero__text {
+        justify-items: start;
     }
 
-    .hero-proof__stack {
-        font-size: 13px;
+    .hero__visual {
+        width: min(330px, 100%);
+        max-width: 330px;
+        justify-self: start;
     }
 
-    section {
-        padding: 80px 5%;
+    .profile-card img {
+        height: 300px;
     }
 
-    .hero-text p {
-        font-size: 16px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 14px;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        width: 100%;
-    }
-
-    .social-link-card {
-        padding: 15px;
-    }
-
-    .social-link-card::after {
+    .architecture-card {
         display: none;
     }
 
-    .hero-image-frame {
-        max-width: 360px;
+    .metrics-grid,
+    .tech-categories,
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-card--featured {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card--featured .project-info {
+        padding: 0 24px 26px;
+    }
+
+    .project-card--featured .carousel-viewport {
+        min-height: 330px;
+    }
+
+    .work-grid,
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1080px) {
+    .hero__content {
+        grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.5fr);
+        align-items: center;
+        gap: 34px;
+    }
+
+    .hero__visual {
+        width: min(300px, 100%);
+        max-width: 300px;
+        justify-self: end;
+    }
+
+    .profile-card img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 760px) {
+    .header,
+    .section-shell,
+    .hero,
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .header {
+        gap: 12px;
+    }
+
+    .logo__text small {
+        display: none;
+    }
+
+    .section-shell {
+        padding-top: 68px;
+        padding-bottom: 68px;
+    }
+
+    .section-title h2,
+    .contact-copy h2 {
+        font-size: 1.85rem;
+    }
+
+    .hero {
+        padding-top: calc(var(--header-height) + 40px);
+        padding-bottom: 46px;
+    }
+
+    .hero__content {
+        gap: 30px;
+    }
+
+    .hero__text {
+        justify-items: stretch;
+    }
+
+    .hero h1 {
+        font-size: 3.05rem;
+    }
+
+    .hero__role {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .hero__description {
+        font-size: 1rem;
+        line-height: 1.72;
+    }
+
+    .hero__visual {
+        width: min(300px, 82vw);
+        max-width: 300px;
+        justify-self: center;
+    }
+
+    .profile-card img {
+        height: 300px;
+        padding: 10px;
+    }
+
+    .architecture-card {
+        display: none;
+    }
+
+    .hero__actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 24px;
+        width: 100%;
+    }
+
+    .hero__actions .btn {
+        min-height: 46px;
+        padding: 12px 10px;
+        font-size: 0.9rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .resume-preview-link {
+        margin-top: 10px;
+    }
+
+    .hero__stack {
+        gap: 8px;
+        margin-top: 22px;
+    }
+
+    .hero__stack li {
+        padding: 7px 9px;
+        font-size: 0.8rem;
+    }
+
+    .metrics-grid,
+    .tech-categories,
+    .projects-grid,
+    .roadmap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-card {
+        min-height: 112px;
+    }
+
+    .about-card,
+    .work-card,
+    .tech-category,
+    .experience-card,
+    .cert-card,
+    .roadmap-card {
+        padding: 22px;
+    }
+
+    .experience-card__header,
+    .resume-modal__header,
+    .resume-modal__footer,
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-date {
+        white-space: normal;
+    }
+
+    .project-carousel {
+        padding: 14px;
+    }
+
+    .project-card--featured .carousel-viewport {
+        min-height: 230px;
+    }
+
+    .project-info,
+    .project-card--featured .project-info {
+        padding: 0 18px 22px;
+    }
+
+    .project-buttons,
+    .contact-actions {
+        flex-direction: column;
+    }
+
+    .btn-github,
+    .btn-demo,
+    .contact-actions .btn {
+        width: 100%;
     }
 
     .resume-modal {
-        padding: 16px;
+        padding: 14px;
     }
 
     .resume-modal__dialog {
-        max-height: calc(100vh - 32px);
-    }
-
-    .resume-modal__header,
-    .resume-modal__footer {
-        padding: 16px;
-    }
-
-    .resume-modal__header h3 {
-        font-size: 20px;
-    }
-
-    .resume-modal__footer {
-        flex-direction: column;
-        align-items: stretch;
+        max-height: calc(100vh - 28px);
     }
 
     .resume-modal__content,
@@ -124,68 +305,101 @@
         min-height: 58vh;
     }
 
-    .sobre-content {
-        padding: 28px 22px;
+    .contact-panel {
+        padding: 20px;
     }
 
-    .sobre-text p:first-child {
-        font-size: 1rem;
+    .contact-form textarea {
+        min-height: 112px;
     }
 
-    .sobre-badges {
-        gap: 10px;
+    #backToTop {
+        right: 16px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
     }
 
-    .sobre-badge {
+    .footer-links {
         width: 100%;
-        justify-content: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .logo__text {
+        display: none;
     }
 
-    .about-expectations__header h3 {
-        font-size: 24px;
+    .language-button {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    .about-expectations__grid {
-        grid-template-columns: 1fr;
+    .language-button__label {
+        max-width: 82px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
-    .expectation-card {
-        padding: 24px 20px;
+    .header-actions {
+        gap: 6px;
     }
 
-    .project-carousel {
-        padding: 14px 14px 12px;
+    .hero h1 {
+        font-size: 2.5rem;
     }
 
-    .project-info {
-        padding: 6px 18px 20px;
+    .hero__visual {
+        width: min(250px, 76vw);
     }
 
-    .project-buttons {
-        flex-direction: column;
+    .profile-card img {
+        height: 250px;
     }
 
-    .btn-github,
-    .btn-demo {
-        width: 100%;
+    .section-title h2,
+    .contact-copy h2 {
+        font-size: 1.65rem;
     }
 
     .carousel-arrow {
-        width: 38px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
     }
 
     .carousel-arrow--prev {
-        left: 10px;
+        left: 8px;
     }
 
     .carousel-arrow--next {
-        right: 10px;
+        right: 8px;
+    }
+}
+
+@media (max-width: 420px) {
+    .header {
+        gap: 8px;
     }
 
-    .project-badge {
-        top: 14px;
-        right: 14px;
+    .language-button {
+        width: 42px;
+        justify-content: center;
+        padding: 0;
     }
 
+    .language-button__label {
+        display: none;
+    }
+
+    .language-menu {
+        right: -52px;
+        min-width: 176px;
+    }
+
+    .theme-toggle,
+    .menu-mobile {
+        width: 40px;
+        min-height: 40px;
+    }
 }
